@@ -160,197 +160,197 @@ function updatePrice() {
 const productRecipes = {   
   
   "Barnyard (or) Kuthuravali Millet": [
-    "assets/Millet Recipe/Barnyard (or) Kuthuravali Millet/Kuthuravali Millet 1.jpg",
-    "assets/Millet Recipe/Barnyard (or) Kuthuravali Millet/Kuthuravali Millet 2.jpg",
-    "assets/Millet Recipe/Barnyard (or) Kuthuravali Millet/Kuthuravali Millet 3.jpg",
-    "assets/Millet Recipe/Barnyard (or) Kuthuravali Millet/Kuthuravali Millet 4.jpg",
-    "assets/Millet Recipe/Barnyard (or) Kuthuravali Millet/Kuthuravali Millet 5.jpg"
+    "../assets/Millet Recipe/Barnyard (or) Kuthuravali Millet/Kuthuravali Millet 1.jpg",
+    "../assets/Millet Recipe/Barnyard (or) Kuthuravali Millet/Kuthuravali Millet 2.jpg",
+    "../assets/Millet Recipe/Barnyard (or) Kuthuravali Millet/Kuthuravali Millet 3.jpg",
+    "../assets/Millet Recipe/Barnyard (or) Kuthuravali Millet/Kuthuravali Millet 4.jpg",
+    "../assets/Millet Recipe/Barnyard (or) Kuthuravali Millet/Kuthuravali Millet 5.jpg"
   ],
 
   "Finger (or) Ragi Millet": [
-    "assets/Millet Recipe/Finger (or) Ragi Millet/Ragi Millet 1.jpg",
-    "assets/Millet Recipe/Finger (or) Ragi Millet/Ragi Millet 2.jpg",
-    "assets/Millet Recipe/Finger (or) Ragi Millet/Ragi Millet 3.jpg",
-    "assets/Millet Recipe/Finger (or) Ragi Millet/Ragi Millet 4.jpg",
-    "assets/Millet Recipe/Finger (or) Ragi Millet/Ragi Millet 5.jpg"
+    "../assets/Millet Recipe/Finger (or) Ragi Millet/Ragi Millet 1.jpg",
+    "../assets/Millet Recipe/Finger (or) Ragi Millet/Ragi Millet 2.jpg",
+    "../assets/Millet Recipe/Finger (or) Ragi Millet/Ragi Millet 3.jpg",
+    "../assets/Millet Recipe/Finger (or) Ragi Millet/Ragi Millet 4.jpg",
+    "../assets/Millet Recipe/Finger (or) Ragi Millet/Ragi Millet 5.jpg"
   ],
 
   "Foxtail (or) Thinai Millet": [
-    "assets/Millet Recipe/Foxtail (or) Thinai Millet/Thinai Millet 1.jpg",
-    "assets/Millet Recipe/Foxtail (or) Thinai Millet/Thinai Millet 2.jpg",
-    "assets/Millet Recipe/Foxtail (or) Thinai Millet/Thinai Millet 3.jpg",
-    "assets/Millet Recipe/Foxtail (or) Thinai Millet/Thinai Millet 4.jpg",
-    "assets/Millet Recipe/Foxtail (or) Thinai Millet/Thinai Millet 5.jpg"
+    "../assets/Millet Recipe/Foxtail (or) Thinai Millet/Thinai Millet 1.jpg",
+    "../assets/Millet Recipe/Foxtail (or) Thinai Millet/Thinai Millet 2.jpg",
+    "../assets/Millet Recipe/Foxtail (or) Thinai Millet/Thinai Millet 3.jpg",
+    "../assets/Millet Recipe/Foxtail (or) Thinai Millet/Thinai Millet 4.jpg",
+    "../assets/Millet Recipe/Foxtail (or) Thinai Millet/Thinai Millet 5.jpg"
   ],
 
   "Kodo (or) Varagu Millet": [
-    "assets/Millet Recipe/Kodo (or) Varagu Millet/Varagu Millet 1.jpg",
-    "assets/Millet Recipe/Kodo (or) Varagu Millet/Varagu Millet 2.jpg",
-    "assets/Millet Recipe/Kodo (or) Varagu Millet/Varagu Millet 3.jpg",
-    "assets/Millet Recipe/Kodo (or) Varagu Millet/Varagu Millet 4.jpg",
-    "assets/Millet Recipe/Kodo (or) Varagu Millet/Varagu Millet 5.jpg"
+    "../assets/Millet Recipe/Kodo (or) Varagu Millet/Varagu Millet 1.jpg",
+    "../assets/Millet Recipe/Kodo (or) Varagu Millet/Varagu Millet 2.jpg",
+    "../assets/Millet Recipe/Kodo (or) Varagu Millet/Varagu Millet 3.jpg",
+    "../assets/Millet Recipe/Kodo (or) Varagu Millet/Varagu Millet 4.jpg",
+    "../assets/Millet Recipe/Kodo (or) Varagu Millet/Varagu Millet 5.jpg"
   ],
 
   "Little (or) Saamai Millet": [
-    "assets/Millet Recipe/Little (or) Saamai Millet/Saamai Millet 1.jpg",
-    "assets/Millet Recipe/Little (or) Saamai Millet/Saamai Millet 2.jpg",
-    "assets/Millet Recipe/Little (or) Saamai Millet/Saamai Millet 3.jpg",
-    "assets/Millet Recipe/Little (or) Saamai Millet/Saamai Millet 4.jpg",
-    "assets/Millet Recipe/Little (or) Saamai Millet/Saamai Millet 5.jpg"
+    "../assets/Millet Recipe/Little (or) Saamai Millet/Saamai Millet 1.jpg",
+    "../assets/Millet Recipe/Little (or) Saamai Millet/Saamai Millet 2.jpg",
+    "../assets/Millet Recipe/Little (or) Saamai Millet/Saamai Millet 3.jpg",
+    "../assets/Millet Recipe/Little (or) Saamai Millet/Saamai Millet 4.jpg",
+    "../assets/Millet Recipe/Little (or) Saamai Millet/Saamai Millet 5.jpg"
   ],
 
   "Pearl (or) Kambu Millet": [
-    "assets/Millet Recipe/Pearl (or) Kambu Millet/Kambu Millet 1.jpg",
-    "assets/Millet Recipe/Pearl (or) Kambu Millet/Kambu Millet 2.jpg",
-    "assets/Millet Recipe/Pearl (or) Kambu Millet/Kambu Millet 3.jpg",
-    "assets/Millet Recipe/Pearl (or) Kambu Millet/Kambu Millet 4.jpg",
-    "assets/Millet Recipe/Pearl (or) Kambu Millet/Kambu Millet 5.jpg"
+    "../assets/Millet Recipe/Pearl (or) Kambu Millet/Kambu Millet 1.jpg",
+    "../assets/Millet Recipe/Pearl (or) Kambu Millet/Kambu Millet 2.jpg",
+    "../assets/Millet Recipe/Pearl (or) Kambu Millet/Kambu Millet 3.jpg",
+    "../assets/Millet Recipe/Pearl (or) Kambu Millet/Kambu Millet 4.jpg",
+    "../assets/Millet Recipe/Pearl (or) Kambu Millet/Kambu Millet 5.jpg"
   ],
   
 
   
   "Seera Samba Raw Rice": [
-    "assets/Rice Recipe/Seeraga Samba/Seeraga Samba 1.jpg",
-    "assets/Rice Recipe/Seeraga Samba/Seeraga Samba 2.jpg",
-    "assets/Rice Recipe/Seeraga Samba/Seeraga Samba 3.jpg",
-    "assets/Rice Recipe/Seeraga Samba/Seeraga Samba 4.jpg"
+    "../assets/Rice Recipe/Seeraga Samba/Seeraga Samba 1.jpg",
+    "../assets/Rice Recipe/Seeraga Samba/Seeraga Samba 2.jpg",
+    "../assets/Rice Recipe/Seeraga Samba/Seeraga Samba 3.jpg",
+    "../assets/Rice Recipe/Seeraga Samba/Seeraga Samba 4.jpg"
   ],
 
   "Rathasali": [
-    "assets/Rice Recipe/Rathasali/Rathasali 1.jpg",
-    "assets/Rice Recipe/Rathasali/Rathasali 2.jpg",
-    "assets/Rice Recipe/Rathasali/Rathasali 3.jpg",
-    "assets/Rice Recipe/Rathasali/Rathasali 4.jpg",
-    "assets/Rice Recipe/Rathasali/Rathasali 5.jpg"
+    "../assets/Rice Recipe/Rathasali/Rathasali 1.jpg",
+    "../assets/Rice Recipe/Rathasali/Rathasali 2.jpg",
+    "../assets/Rice Recipe/Rathasali/Rathasali 3.jpg",
+    "../assets/Rice Recipe/Rathasali/Rathasali 4.jpg",
+    "../assets/Rice Recipe/Rathasali/Rathasali 5.jpg"
   ],
 
   "Illupaipoo Samba": [
-    "assets/Rice Recipe/Illupaipoo Samba/Illupaipoo Samba 1.jpg",
-    "assets/Rice Recipe/Illupaipoo Samba/Illupaipoo Samba 2.jpg",
-    "assets/Rice Recipe/Illupaipoo Samba/Illupaipoo Samba 3.jpg",
-    "assets/Rice Recipe/Illupaipoo Samba/Illupaipoo Samba 4.jpg"
+    "../assets/Rice Recipe/Illupaipoo Samba/Illupaipoo Samba 1.jpg",
+    "../assets/Rice Recipe/Illupaipoo Samba/Illupaipoo Samba 2.jpg",
+    "../assets/Rice Recipe/Illupaipoo Samba/Illupaipoo Samba 3.jpg",
+    "../assets/Rice Recipe/Illupaipoo Samba/Illupaipoo Samba 4.jpg"
   ],
   
   "Kerala Matta": [
-    "assets/Rice Recipe/Kerala Matta/Kerala Matta 1.jpg",
-    "assets/Rice Recipe/Kerala Matta/Kerala Matta 2.jpg",
-    "assets/Rice Recipe/Kerala Matta/Kerala Matta 3.jpg",
-    "assets/Rice Recipe/Kerala Matta/Kerala Matta 4.jpg",
+    "../assets/Rice Recipe/Kerala Matta/Kerala Matta 1.jpg",
+    "../assets/Rice Recipe/Kerala Matta/Kerala Matta 2.jpg",
+    "../assets/Rice Recipe/Kerala Matta/Kerala Matta 3.jpg",
+    "../assets/Rice Recipe/Kerala Matta/Kerala Matta 4.jpg",
   ],
 
   "Thanga Samba": [
-    "assets/Rice Recipe/Thanga Samba/Thanga Samba 1.jpg",
-    "assets/Rice Recipe/Thanga Samba/Thanga Samba 2.jpg",
-    "assets/Rice Recipe/Thanga Samba/Thanga Samba 3.jpg",
-    "assets/Rice Recipe/Thanga Samba/Thanga Samba 4.jpg",
+    "../assets/Rice Recipe/Thanga Samba/Thanga Samba 1.jpg",
+    "../assets/Rice Recipe/Thanga Samba/Thanga Samba 2.jpg",
+    "../assets/Rice Recipe/Thanga Samba/Thanga Samba 3.jpg",
+    "../assets/Rice Recipe/Thanga Samba/Thanga Samba 4.jpg",
   ],
 
   "Thooyamalli Boiled": [
-    "assets/Rice Recipe/Thooyamalli Boiled/Thooyamalli Boiled 1.jpg",
-    "assets/Rice Recipe/Thooyamalli Boiled/Thooyamalli Boiled 2.jpg",
-    "assets/Rice Recipe/Thooyamalli Boiled/Thooyamalli Boiled 3.jpg",
-    "assets/Rice Recipe/Thooyamalli Boiled/Thooyamalli Boiled 4.jpg",
+    "../assets/Rice Recipe/Thooyamalli Boiled/Thooyamalli Boiled 1.jpg",
+    "../assets/Rice Recipe/Thooyamalli Boiled/Thooyamalli Boiled 2.jpg",
+    "../assets/Rice Recipe/Thooyamalli Boiled/Thooyamalli Boiled 3.jpg",
+    "../assets/Rice Recipe/Thooyamalli Boiled/Thooyamalli Boiled 4.jpg",
   ],
 
   "Idly Rice": [
-    "assets/Rice Recipe/Idly Rice/Idly Rice 1.jpg",
-    "assets/Rice Recipe/Idly Rice/Idly Rice 2.jpg",
-    "assets/Rice Recipe/Idly Rice/Idly Rice 3.jpg",
-    "assets/Rice Recipe/Idly Rice/Idly Rice 4.jpg",
-    "assets/Rice Recipe/Idly Rice/Idly Rice 5.jpg"
+    "../assets/Rice Recipe/Idly Rice/Idly Rice 1.jpg",
+    "../assets/Rice Recipe/Idly Rice/Idly Rice 2.jpg",
+    "../assets/Rice Recipe/Idly Rice/Idly Rice 3.jpg",
+    "../assets/Rice Recipe/Idly Rice/Idly Rice 4.jpg",
+    "../assets/Rice Recipe/Idly Rice/Idly Rice 5.jpg"
   ],
   
   "Navara Rice": [
-    "assets/Rice Recipe/Navara Rice/Navara Rice 1.jpg",
-    "assets/Rice Recipe/Navara Rice/Navara Rice 2.jpg",
-    "assets/Rice Recipe/Navara Rice/Navara Rice 3.jpg",
-    "assets/Rice Recipe/Navara Rice/Navara Rice 4.jpg",
-    "assets/Rice Recipe/Navara Rice/Navara Rice 5.jpg"
+    "../assets/Rice Recipe/Navara Rice/Navara Rice 1.jpg",
+    "../assets/Rice Recipe/Navara Rice/Navara Rice 2.jpg",
+    "../assets/Rice Recipe/Navara Rice/Navara Rice 3.jpg",
+    "../assets/Rice Recipe/Navara Rice/Navara Rice 4.jpg",
+    "../assets/Rice Recipe/Navara Rice/Navara Rice 5.jpg"
   ], 
 
   "Kichali Samba": [
-    "assets/Rice Recipe/Kichali Samba/Kichali Samba 1.jpg",
-    "assets/Rice Recipe/Kichali Samba/Kichali Samba 1.jpg",
-    "assets/Rice Recipe/Kichali Samba/Kichali Samba 1.jpg",
-    "assets/Rice Recipe/Kichali Samba/Kichali Samba 1.jpg",
-    "assets/Rice Recipe/Kichali Samba/Kichali Samba 1.jpg"
+    "../assets/Rice Recipe/Kichali Samba/Kichali Samba 1.jpg",
+    "../assets/Rice Recipe/Kichali Samba/Kichali Samba 1.jpg",
+    "../assets/Rice Recipe/Kichali Samba/Kichali Samba 1.jpg",
+    "../assets/Rice Recipe/Kichali Samba/Kichali Samba 1.jpg",
+    "../assets/Rice Recipe/Kichali Samba/Kichali Samba 1.jpg"
   ], 
 
   "Mapillai Samba Rice": [
-    "assets/Rice Recipe/Mapillai Samba Rice/Mapillai Samba Rice 1.jpg",
-    "assets/Rice Recipe/Mapillai Samba Rice/Mapillai Samba Rice 2.jpg",
-    "assets/Rice Recipe/Mapillai Samba Rice/Mapillai Samba Rice 3.jpg",
-    "assets/Rice Recipe/Mapillai Samba Rice/Mapillai Samba Rice 4.jpg",
-    "assets/Rice Recipe/Mapillai Samba Rice/Mapillai Samba Rice 5.jpg"
+    "../assets/Rice Recipe/Mapillai Samba Rice/Mapillai Samba Rice 1.jpg",
+    "../assets/Rice Recipe/Mapillai Samba Rice/Mapillai Samba Rice 2.jpg",
+    "../assets/Rice Recipe/Mapillai Samba Rice/Mapillai Samba Rice 3.jpg",
+    "../assets/Rice Recipe/Mapillai Samba Rice/Mapillai Samba Rice 4.jpg",
+    "../assets/Rice Recipe/Mapillai Samba Rice/Mapillai Samba Rice 5.jpg"
   ], 
 
   "Black Kavuni Rice": [
-    "assets/Rice Recipe/Black Kavuni Rice/Black Kavuni Rice 1.jpg",
-    "assets/Rice Recipe/Black Kavuni Rice/Black Kavuni Rice 2.jpg",
-    "assets/Rice Recipe/Black Kavuni Rice/Black Kavuni Rice 3.jpg",
-    "assets/Rice Recipe/Black Kavuni Rice/Black Kavuni Rice 4.jpg",
-    "assets/Rice Recipe/Black Kavuni Rice/Black Kavuni Rice 5.jpg"
+    "../assets/Rice Recipe/Black Kavuni Rice/Black Kavuni Rice 1.jpg",
+    "../assets/Rice Recipe/Black Kavuni Rice/Black Kavuni Rice 2.jpg",
+    "../assets/Rice Recipe/Black Kavuni Rice/Black Kavuni Rice 3.jpg",
+    "../assets/Rice Recipe/Black Kavuni Rice/Black Kavuni Rice 4.jpg",
+    "../assets/Rice Recipe/Black Kavuni Rice/Black Kavuni Rice 5.jpg"
   ], 
 
   "Ponni Boiled": [
-    "assets/Rice Recipe/Ponni Boiled/Ponni Boiled 1.jpg",
-    "assets/Rice Recipe/Ponni Boiled/Ponni Boiled 2.jpg",
-    "assets/Rice Recipe/Ponni Boiled/Ponni Boiled 3.jpg",
-    "assets/Rice Recipe/Ponni Boiled/Ponni Boiled 4.jpg",
-    "assets/Rice Recipe/Ponni Boiled/Ponni Boiled 5.jpg"
+    "../assets/Rice Recipe/Ponni Boiled/Ponni Boiled 1.jpg",
+    "../assets/Rice Recipe/Ponni Boiled/Ponni Boiled 2.jpg",
+    "../assets/Rice Recipe/Ponni Boiled/Ponni Boiled 3.jpg",
+    "../assets/Rice Recipe/Ponni Boiled/Ponni Boiled 4.jpg",
+    "../assets/Rice Recipe/Ponni Boiled/Ponni Boiled 5.jpg"
   ], 
 
   "Ponni Raw Rice": [
-    "assets/Rice Recipe/Ponni Raw Rice/Ponni Raw Rice 1.jpg",
-    "assets/Rice Recipe/Ponni Raw Rice/Ponni Raw Rice 2.jpg",
-    "assets/Rice Recipe/Ponni Raw Rice/Ponni Raw Rice 3.jpg",
-    "assets/Rice Recipe/Ponni Raw Rice/Ponni Raw Rice 4.jpg",
-    "assets/Rice Recipe/Ponni Raw Rice/Ponni Raw Rice 5.jpg"
+    "../assets/Rice Recipe/Ponni Raw Rice/Ponni Raw Rice 1.jpg",
+    "../assets/Rice Recipe/Ponni Raw Rice/Ponni Raw Rice 2.jpg",
+    "../assets/Rice Recipe/Ponni Raw Rice/Ponni Raw Rice 3.jpg",
+    "../assets/Rice Recipe/Ponni Raw Rice/Ponni Raw Rice 4.jpg",
+    "../assets/Rice Recipe/Ponni Raw Rice/Ponni Raw Rice 5.jpg"
   ],
   
   "Poongar Rice": [
-    "assets/Rice Recipe/Poongar Rice/Poongar Rice 1.jpg",
-    "assets/Rice Recipe/Poongar Rice/Poongar Rice 2.jpg",
-    "assets/Rice Recipe/Poongar Rice/Poongar Rice 3.jpg",
-    "assets/Rice Recipe/Poongar Rice/Poongar Rice 4.jpg",
-    "assets/Rice Recipe/Poongar Rice/Poongar Rice 5.jpg"
+    "../assets/Rice Recipe/Poongar Rice/Poongar Rice 1.jpg",
+    "../assets/Rice Recipe/Poongar Rice/Poongar Rice 2.jpg",
+    "../assets/Rice Recipe/Poongar Rice/Poongar Rice 3.jpg",
+    "../assets/Rice Recipe/Poongar Rice/Poongar Rice 4.jpg",
+    "../assets/Rice Recipe/Poongar Rice/Poongar Rice 5.jpg"
   ], 
 
   "Karugu Kuruvai Rice": [
-    "assets/Rice Recipe/Karugu Kuruvai Rice/Karugu Kuruvai Rice 1.jpg",
-    "assets/Rice Recipe/Karugu Kuruvai Rice/Karugu Kuruvai Rice 2.jpg",
-    "assets/Rice Recipe/Karugu Kuruvai Rice/Karugu Kuruvai Rice 3.jpg",
-    "assets/Rice Recipe/Karugu Kuruvai Rice/Karugu Kuruvai Rice 4.jpg",
-    "assets/Rice Recipe/Karugu Kuruvai Rice/Karugu Kuruvai Rice 5.jpg"
+    "../assets/Rice Recipe/Karugu Kuruvai Rice/Karugu Kuruvai Rice 1.jpg",
+    "../assets/Rice Recipe/Karugu Kuruvai Rice/Karugu Kuruvai Rice 2.jpg",
+    "../assets/Rice Recipe/Karugu Kuruvai Rice/Karugu Kuruvai Rice 3.jpg",
+    "../assets/Rice Recipe/Karugu Kuruvai Rice/Karugu Kuruvai Rice 4.jpg",
+    "../assets/Rice Recipe/Karugu Kuruvai Rice/Karugu Kuruvai Rice 5.jpg"
   ], 
 
   "Kullakar Rice": [
-    "assets/Rice Recipe/Kullakar Rice/Kullakar Rice 1.jpg",
-    "assets/Rice Recipe/Kullakar Rice/Kullakar Rice 2.jpg",
-    "assets/Rice Recipe/Kullakar Rice/Kullakar Rice 3.jpg",
-    "assets/Rice Recipe/Kullakar Rice/Kullakar Rice 4.jpg",
-    "assets/Rice Recipe/Kullakar Rice/Kullakar Rice 5.jpg"
+    "../assets/Rice Recipe/Kullakar Rice/Kullakar Rice 1.jpg",
+    "../assets/Rice Recipe/Kullakar Rice/Kullakar Rice 2.jpg",
+    "../assets/Rice Recipe/Kullakar Rice/Kullakar Rice 3.jpg",
+    "../assets/Rice Recipe/Kullakar Rice/Kullakar Rice 4.jpg",
+    "../assets/Rice Recipe/Kullakar Rice/Kullakar Rice 5.jpg"
   ],
 
   "Red Rice": [
-    "assets/Rice Recipe/Red Rice/Red Rice 1.jpg",
-    "assets/Rice Recipe/Red Rice/Red Rice 2.jpg",
-    "assets/Rice Recipe/Red Rice/Red Rice 3.jpg",
-    "assets/Rice Recipe/Red Rice/Red Rice 4.jpg"
+    "../assets/Rice Recipe/Red Rice/Red Rice 1.jpg",
+    "../assets/Rice Recipe/Red Rice/Red Rice 2.jpg",
+    "../assets/Rice Recipe/Red Rice/Red Rice 3.jpg",
+    "../assets/Rice Recipe/Red Rice/Red Rice 4.jpg"
   ],
 
   "Kattu Yanam Rice": [
-    "assets/Rice Recipe/Kattu Yanam Rice/Kattu Yanam Rice 1.jpg",
-    "assets/Rice Recipe/Kattu Yanam Rice/Kattu Yanam Rice 2.jpg",
-    "assets/Rice Recipe/Kattu Yanam Rice/Kattu Yanam Rice 3.jpg",
-    "assets/Rice Recipe/Kattu Yanam Rice/Kattu Yanam Rice 4.jpg"
+    "../assets/Rice Recipe/Kattu Yanam Rice/Kattu Yanam Rice 1.jpg",
+    "../assets/Rice Recipe/Kattu Yanam Rice/Kattu Yanam Rice 2.jpg",
+    "../assets/Rice Recipe/Kattu Yanam Rice/Kattu Yanam Rice 3.jpg",
+    "../assets/Rice Recipe/Kattu Yanam Rice/Kattu Yanam Rice 4.jpg"
   ],
 
   "Swarna Masuri": [
-    "assets/Rice Recipe/Swarna Masuri/Swarna Masuri 1.jpg",
-    "assets/Rice Recipe/Swarna Masuri/Swarna Masuri 2.jpg",
-    "assets/Rice Recipe/Swarna Masuri/Swarna Masuri 3.jpg",
-    "assets/Rice Recipe/Swarna Masuri/Swarna Masuri 4.jpg"
+    "../assets/Rice Recipe/Swarna Masuri/Swarna Masuri 1.jpg",
+    "../assets/Rice Recipe/Swarna Masuri/Swarna Masuri 2.jpg",
+    "../assets/Rice Recipe/Swarna Masuri/Swarna Masuri 3.jpg",
+    "../assets/Rice Recipe/Swarna Masuri/Swarna Masuri 4.jpg"
   ],
 
 
@@ -359,26 +359,26 @@ const productRecipes = {
 
   
   "Kambu Flour": [
-    "assets/Flour Recipe/Kambu Flour/Kambu 1.jpg",
-    "assets/Flour Recipe/Kambu Flour/Kambu 2.jpg",
-    "assets/Flour Recipe/Kambu Flour/Kambu 3.jpg",
-    "assets/Flour Recipe/Kambu Flour/Kambu 4.jpg",
-    "assets/Flour Recipe/Kambu Flour/Kambu 5.jpg"
+    "../assets/Flour Recipe/Kambu Flour/Kambu 1.jpg",
+    "../assets/Flour Recipe/Kambu Flour/Kambu 2.jpg",
+    "../assets/Flour Recipe/Kambu Flour/Kambu 3.jpg",
+    "../assets/Flour Recipe/Kambu Flour/Kambu 4.jpg",
+    "../assets/Flour Recipe/Kambu Flour/Kambu 5.jpg"
   ], 
 
   "Kavuni Flour": [
-    "assets/Flour Recipe/Kavuni Flour/Kavuni  1.jpg",
-    "assets/Flour Recipe/Kavuni Flour/Kavuni  2.jpg",
-    "assets/Flour Recipe/Kavuni Flour/Kavuni  3.jpg",
-    "assets/Flour Recipe/Kavuni Flour/Kavuni  4.jpg",
-    "assets/Flour Recipe/Kavuni Flour/Kavuni  5.jpg"
+    "../assets/Flour Recipe/Kavuni Flour/Kavuni  1.jpg",
+    "../assets/Flour Recipe/Kavuni Flour/Kavuni  2.jpg",
+    "../assets/Flour Recipe/Kavuni Flour/Kavuni  3.jpg",
+    "../assets/Flour Recipe/Kavuni Flour/Kavuni  4.jpg",
+    "../assets/Flour Recipe/Kavuni Flour/Kavuni  5.jpg"
   ],
 
   "Ragi Flour": [
-    "assets/Flour Recipe/Ragi Flour/Ragi Flour 1.jpg",
-    "assets/Flour Recipe/Ragi Flour/Ragi Flour 2.jpg",
-    "assets/Flour Recipe/Ragi Flour/Ragi Flour 3.jpg",
-    "assets/Flour Recipe/Ragi Flour/Ragi Flour 4.jpg"
+    "../assets/Flour Recipe/Ragi Flour/Ragi Flour 1.jpg",
+    "../assets/Flour Recipe/Ragi Flour/Ragi Flour 2.jpg",
+    "../assets/Flour Recipe/Ragi Flour/Ragi Flour 3.jpg",
+    "../assets/Flour Recipe/Ragi Flour/Ragi Flour 4.jpg"
   ], 
 };
 
