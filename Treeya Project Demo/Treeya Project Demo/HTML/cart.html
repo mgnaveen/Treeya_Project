@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mangalsha</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../assets/Logo.png">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/product-detail.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/cart.css">
+</head>
+
+<body>
+<a href="javascript:history.back()" class="back-btn">←</a>
+<header class="glass-header">
+    <div class="left">
+        <a href="../HTML/index.html">
+            <img src="../assets/Logo.png" class="logo" alt="Treeyaa Natural Foods Logo">
+        </a>
+        <span class="brand">Mangalsha</span>
+    </div>
+
+    <nav>
+        <a href="../HTML/index.html">Home</a>
+        <link rel="stylesheet" href="../css/header.css">
+        <a href="../HTML/product.html">Products</a>
+        <a href="../HTML/about.html">About</a>
+    </nav>    
+
+    <div class="right">
+        <input type="text" id="searchInput" placeholder="Search products...">
+    </div>
+</header>
+
+<main class="cart-wrapper">
+
+  <!-- LEFT : CART ITEMS -->
+  <section class="cart-left">
+    <h2 class="cart-title">My Cart (<span id="cartCountText">0</span>)</h2>
+    <div id="cartItems"></div>
+
+    <!-- Empty Cart -->
+    <div id="emptyCart" class="empty-cart hidden">
+      <img src="../assets/empty-cart.png" alt="Empty Cart">
+      <h3>Your cart is empty</h3>
+      <p>Looks like you haven't added anything yet</p>
+      <button onclick="location.href='../HTML/product.html'" class="continue-btn">Continue Shopping</button>
+    </div>
+  </section>
+
+  <!-- RIGHT : SUMMARY -->
+  <aside class="cart-right">
+
+    <div class="address-box">
+      <h3>📍 Delivery Address</h3>
+      <button class="outline-btn">+ Add New</button>
+    </div>
+
+    <div class="summary-box">
+      <h3>Order Summary</h3>
+
+      <div class="row">
+        <span>Subtotal</span>
+        <span>₹<span id="subTotal">0</span></span>
+      </div>
+
+      <div class="row">
+        <span>Delivery Charges</span>
+        <span>-</span>
+      </div>
+
+      <div class="row discount">
+        <span>Discount (1%)</span>
+        <span>- ₹<span id="discount">0</span></span>
+      </div>
+
+      <hr>
+
+      <div class="row total">
+        <span>Total (Incl. GST)</span>
+        <span>₹<span id="grandTotal">0</span></span>
+      </div>
+
+      <button id="checkoutBtn" class="pay-btn">Proceed to Pay</button>
+      <button class="outline-btn" onclick="location.href='../HTML/product.html'">Continue Shopping</button>
+    </div>
+
+  </aside>
+</main>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column brand">
+      <h2>Treeyaa Natural Foods</h2>
+      <p>India’s trusted online store for natural millets, organic rice, healthy flours, and pure natural food products delivered to your doorstep.</p>
+      <p class="trust">✔ FSSAI Certified &nbsp; | &nbsp; ✔ 100% Secure Payments</p>
+    </div>
+    <div class="footer-column">
+      <h3>Company</h3>
+      <a href="../HTML/about.html">About Us</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Disclaimer</a>
+    </div>
+    <div class="footer-column">
+      <h3>Account</h3>
+      <a href="#" id="loginTriggerFooter">Sign In</a>
+      <a href="../HTML/cart.html">Cart</a>
+      <a href="#">My Wishlist</a>
+      <a href="#">Become a Vendor</a>
+    </div>
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <p>📍 Tamil Nadu, India</p>
+      <p>📞 (+91) 98765 43210</p>
+      <p>✉️ support@treeyaa.com</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Treeyaa Natural Foods. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script src="../js/cart.js"></script>
+</body>
+</html>

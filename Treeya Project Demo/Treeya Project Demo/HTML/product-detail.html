@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mangalsha</title>
+  <link rel="stylesheet" href="product.css">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+    content="Treeyaa Natural Food Products offers healthy millet, rice, flour, snacks and traditional recipes.">
+
+  <meta name="keywords"
+    content="millets, natural food Products, organic millets, healthy food">
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="icon" type="image/png" href="../assets/Logo.png">
+
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/cart.css">
+  <link rel="stylesheet" href="../css/product-detail.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <script type="application/ld+json">
+    [
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Treeyaa Natural Foods Categories",
+            "url": "https://www.treeyaa.com",
+            "about": {
+            "@type": "Thing",
+            "name": "Millet and Natural Food Products"
+            },
+            "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Millet" },
+                { "@type": "ListItem", "position": 2, "name": "Rice" },
+                { "@type": "ListItem", "position": 3, "name": "Flour" },
+                { "@type": "ListItem", "position": 4, "name": "Snacks" },
+                { "@type": "ListItem", "position": 5, "name": "Recipe" }
+                
+            ]
+            }
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "Running Offers on Natural Foods",
+            "itemListElement": [
+            { "@type": "Offer", "position": 1, "name": "Millet Food Products" },
+            { "@type": "Offer", "position": 2, "name": "Natural Food Products" },
+            { "@type": "Offer", "position": 3, "name": "Traditional Healthy Food Products" }
+            ]
+        }
+    ]  
+  </script>
+</head>
+
+<body>
+
+<header class="glass-header">
+
+  <div class="left">
+    <a href="index.html">
+      <img src="../assets/Logo.png" class="logo" alt="Treeyaa Natural Foods Logo">
+    </a>
+    <span class="brand">Mangalsha</span>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="product.html">Products</a>
+    <a href="about.html">About</a>
+  </nav>    
+
+  <div class="right">
+    <input type="text" id="searchInput" placeholder="Search products...">
+
+    <div class="icon" id="cartIcon" style="cursor:pointer;">
+      🛒 <span class="badge" id="cartCount">0</span>
+    </div>
+    <a class="icon" id="loginBtn">👤</a>
+  </div>
+
+</header>
+
+<a href="javascript:history.back()" class="back-btn">←</a>
+
+<!-- ================= PRODUCT SECTION ================= -->
+
+<div class="detail-container">
+
+  <div class="product-layout">
+
+    <!-- ===== LEFT SIDE (IMAGES) ===== -->
+    <div class="product-left">
+
+      <div class="product-image-layout">
+
+        <!-- Vertical Thumbnails -->
+        <div class="product-thumbs" id="productThumbs"></div>
+
+        <!-- Main Image -->
+        <div class="product-main-image">
+          <img id="img" alt="Product Image">
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ===== CENTER SIDE (DETAILS) ===== -->
+    <div class="product-center">
+
+      <h2 id="name"></h2>
+
+      <p class="rating">⭐ 4.2 (3,351 ratings)</p>
+
+      <p id="description" class="product-description"></p>
+
+      <label for="weightSelect"><strong>Select Weight:</strong></label>
+      <select id="weightSelect"></select>
+
+      <p id="price"></p>
+
+    </div>
+
+
+    <!-- ===== RIGHT SIDE (BUY BOX) ===== -->
+    <div class="product-right">
+
+      <h3 id="rightPrice"></h3>
+
+      <p class="delivery">FREE delivery on orders over ₹499</p>
+
+      <p class="stock">Only few left in stock.</p>
+
+      <div class="qty-box">
+        <button id="minus">−</button>
+        <span id="qty">1</span>
+        <button id="plus">+</button>
+      </div>
+
+      <button class="add-to-cart" id="addCart">Add to Cart</button>
+
+      <button class="buy-now">Buy Now</button>
+
+    </div>
+
+  </div>
+</div>
+
+
+<div class="related-section" id="relatedSection">
+  <h3 id="relatedTitle">Related Products</h3>
+  <div class="related-scroll" id="relatedContainer"></div>
+</div>
+
+
+<div class="product-extra" id="recipeSection">
+
+  <h3 class="recipe-title">🍽️ Recipes</h3>
+
+  <div class="recipe-layout">
+
+    <div class="recipe-thumbs" id="recipeThumbs"></div>
+    
+    <div class="recipe-preview">
+      <img id="recipeMainImg" src="" alt="Recipe Preview">
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="image-modal" id="imageModal">
+  <span class="close-modal" id="closeModal">&times;</span>
+  <img id="modalImg">
+</div>
+
+
+<div class="login-overlay" id="loginOverlay"></div>
+
+<div class="login-panel" id="loginPanel">
+    <button class="close-btn" id="closeLogin">×</button>
+
+    <h2>Login</h2>
+    <input type="email" placeholder="Email" id="loginEmail">
+    <input type="password" placeholder="Password" id="loginPassword">
+    <button class="login-submit" id="loginBtnSubmit">Login</button>
+
+    <p style="text-align:center; margin-top:10px;">
+        <button class="signup-link" id="openSignup" type="button">Sign Up</button>
+    </p>
+</div>
+
+<div class="signup-panel" id="signupPanel">
+    <button class="close-btn" id="closeSignup">×</button>
+    <h2>Sign Up</h2>
+    <input type="text" placeholder="Full Name" id="signupName">
+    <input type="email" placeholder="Email" id="signupEmail">
+    <input type="tel" placeholder="Mobile No" id="signupMobile">
+    <input type="text" placeholder="Address" id="signupAddress">
+    <input type="password" placeholder="Password" id="signupPassword">
+    <button class="signup-submit" id="signupBtnSubmit">Sign Up</button>
+</div>
+
+
+<script src="../js/product-detail.js"></script>
+<script src="../js/cart.js"></script>
+<script src="../js/Home.js"></script>
+
+</body>
+</html>
+    

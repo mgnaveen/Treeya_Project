@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Mangalsha</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+    content="Buy organic millets, traditional rice varieties, healthy flour and natural food products online in India. Chemical-free and farm-sourced products at Treeyaa Natural Foods.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="icon" type="image/png" href="../assets/Logo.png">
+
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/product.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+</head>
+
+<body>
+
+<header class="glass-header">
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Store",
+        "name": "Treeyaa Natural Foods",
+        "url": "https://www.treeyaa.com",
+        "description": "Online store selling millets, rice, flour and natural food products in India."
+        }
+    </script>
+
+    <div class="left">
+        <a href="../HTML/index.html">
+        <img src="../assets/Logo.png" class="logo" alt="Treeyaa Natural Foods Logo">
+        </a>
+        <span class="brand">Mangalsha</span>
+    </div>
+
+    <nav>
+        <a href="../HTML/index.html">Home</a>
+        <a href="../HTML/product.html">Product</a>
+        <a href="../HTML/about.html">About</a>
+    </nav>    
+            
+    <div class="right">
+        <input type="text" id="searchInput" placeholder="Search products...">
+
+        <div class="icon" id="cartIcon">
+            🛒 <span class="badge" id="cartCount">0</span>
+        </div>
+        <a class="icon" id="loginBtn">👤</a>
+    </div>   
+</header>
+<div class="main-wrapper">
+
+    <div class="category-container">
+
+        <a href="product.html?category=Millet" class="category-item">
+            <div class="circle">
+                <img src="../assets/Millets.png" alt="Millet">
+            </div>
+            <p class="category-item-text">Millet</p>
+        </a>
+
+        <a href="product.html?category=Rice" class="category-item">
+            <div class="circle">
+                <img src="../assets/Rice.png" alt="Rice">
+            </div>
+            <p class="category-item-text">Rice</p>
+        </a>
+
+        <a href="product.html?category=Flour" class="category-item">
+            <div class="circle">
+                <img src="../assets/flour.png" alt="Flour">
+            </div>
+            <p class="category-item-text">Flour</p>
+        </a>
+
+        <a href="product.html?category=Snacks" class="category-item">
+            <div class="circle">
+                <img src="../assets/Snacks.png" alt="Snacks">
+            </div>
+            <p class="category-item-text">Snacks</p>
+        </a>
+
+        <a href="product.html?category=Festival Offers" class="category-item">
+            <div class="circle">
+                <img src="../assets/Snacks.png" alt="Festival Offer">
+            </div>
+            <p class="category-item-text">Festival Offers</p>
+        </a>
+
+    </div>
+
+    <section class="product-section">
+        <div id="productContainer" class="product-grid"></div>
+    </section>
+
+</div>
+
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <div class="footer-column brand">
+      <h2>Treeyaa Natural Foods</h2>
+      <p>
+        India’s trusted online store for natural millets, organic rice,
+        healthy flours, and pure natural food products delivered to your doorstep.
+      </p>
+      <p class="trust">
+        ✔ FSSAI Certified &nbsp; | &nbsp; ✔ 100% Secure Payments
+      </p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Company</h3>
+      <a href="../HTML/about.html">About Us</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Disclaimer</a>
+    </div>
+
+    <div class="footer-column">
+      <h3>Account</h3>
+      <a href="#" id="loginTriggerFooter">Sign In</a>
+      <a href="../HTML/cart.html">Cart</a>
+      <a href="#">My Wishlist</a>
+      <a href="#">Become a Vendor</a>
+    </div>
+
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <p>📍 Tamil Nadu, India</p>
+      <p>📞 (+91) 98765 43210</p>
+      <p>✉️ support@treeyaa.com</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Treeyaa Natural Foods. All Rights Reserved.</p>
+  </div>
+
+<section class="seo-content">
+  <h1>Buy Millets and Traditional Rice Online</h1>
+  <p>
+    Treeyaa Natural Foods offers premium millets, traditional rice,
+    healthy flour and natural food products in India.
+  </p>
+</section>
+
+
+</footer>
+
+<div class="login-overlay" id="loginOverlay"></div>
+
+<div class="login-panel" id="loginPanel">
+    <button class="close-btn" id="closeLogin">×</button>
+    <h2>Login</h2>
+    <input type="email" placeholder="Email" id="loginEmail">
+    <input type="password" placeholder="Password" id="loginPassword">
+    <button class="login-submit" id="loginBtnSubmit">Login</button>
+    <p style="text-align:center;margin-top:10px;">
+    <button class="signup-link" id="openSignup">Sign Up</button>
+    </p>
+</div>
+
+<div class="signup-panel" id="signupPanel">
+    <button class="close-btn" id="closeSignup">×</button>
+    <h2>Sign Up</h2>
+    <input type="text" placeholder="Full Name">
+    <input type="email" placeholder="Email">
+    <input type="tel" placeholder="Mobile No">
+    <input type="text" placeholder="Address">
+    <input type="password" placeholder="Password">
+    <button class="signup-submit">Sign Up</button>
+</div>
+
+<script src="../js/Home.js"></script>
+<script src="../js/cart.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/product.js"></script>
+
+</body>
+</html>

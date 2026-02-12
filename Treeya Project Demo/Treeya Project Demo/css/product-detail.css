@@ -1,0 +1,336 @@
+/* ================= MAIN CONTAINER ================= */
+
+.detail-container {
+  margin: 0 auto;
+  padding: 40px 20px;
+  max-width: 1400px;
+}
+
+/* ================= AMAZON STYLE LAYOUT ================= */
+
+.product-layout {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* LEFT */
+.product-left {
+  flex: 1.2;
+  padding-top: 5px;
+}
+
+/* CENTER */
+.product-center {
+  flex: 1.5;
+  padding-left: 10px;
+}
+
+/* RIGHT */
+.product-right {
+  flex: 1;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 110px;
+  background: #ffffff;
+  min-width: 280px;
+}
+
+/* ================= PRODUCT IMAGE SECTION ================= */
+
+.product-image-layout {
+  display: flex;
+  gap: 18px;
+}
+
+.product-thumbs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.product-thumb {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 0.6;
+  border: 2px solid transparent;
+  transition: 0.2s;
+}
+
+.product-thumb:hover,
+.product-thumb.active {
+  opacity: 1;
+  border-color: #16a34a;
+}
+
+.product-main-image img {
+  width: 120%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 16px;
+  cursor: zoom-in;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.18);
+  transition: 0.25s;
+}
+
+.product-main-image img:hover {
+  transform: scale(1.03);
+}
+
+/* ================= TEXT + DETAILS ================= */
+
+#name {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.rating {
+  margin-bottom: 12px;
+}
+
+.product-description {
+  margin: 12px 0 20px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+#weightSelect {
+  width: 220px;
+  padding: 12px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 14px;
+}
+
+#price {
+  font-size: 28px;
+  font-weight: 800;
+  color: #16a34a;
+}
+
+/* ================= RIGHT SIDE ================= */
+
+#rightPrice {
+  font-size: 28px;
+  font-weight: 800;
+  color: #16a34a;
+  margin-bottom: 10px;
+}
+
+.delivery {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.stock {
+  font-size: 14px;
+  color: #b91c1c;
+  margin-bottom: 16px;
+}
+
+.qty-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.qty-box button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.add-to-cart,
+.buy-now {
+  width: 100%;
+  padding: 14px 0;
+  border-radius: 14px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.add-to-cart {
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  color: white;
+}
+
+.buy-now {
+  background: linear-gradient(135deg, #facc15, #fbbf24);
+}
+
+/* ================= RELATED PRODUCTS ================= */
+
+.related-section {
+  margin: 60px auto 20px;
+  max-width: 1400px;
+  padding: 0 20px;
+}
+
+.related-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+}
+
+.related-card {
+  min-width: 160px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.related-card:hover {
+  transform: translateY(-4px);
+}
+
+.related-card img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ================= RECIPE SECTION ================= */
+
+.product-extra {
+  margin: 50px auto;
+  max-width: 1400px;
+  padding: 0 20px;
+}
+
+.recipe-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.recipe-preview img {
+  width: 100%;
+  max-width: 600px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 14px;
+  cursor: zoom-in;
+}
+
+.recipe-thumbs {
+  display: flex;
+  gap: 10px;
+}
+
+.recipe-thumb {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.recipe-thumb.active,
+.recipe-thumb:hover {
+  opacity: 1;
+}
+
+/* ================= IMAGE MODAL ================= */
+
+.image-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.image-modal.show {
+  display: flex;
+}
+
+.image-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 14px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+
+  .product-layout {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .product-right {
+    position: static;
+  }
+
+  .product-main-image img {
+    height: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .product-main-image img {
+    height: 380px;
+  }
+
+  .product-thumbs {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .product-main-image img {
+    height: 300px;
+  }
+
+  #rightPrice {
+    font-size: 22px;
+  }
+}
+
+
+
+
+
+
+
+/*.recipe-preview {
+  width: 100%;        
+  height: 280px;      
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.18);
+}
+
+.recipe-preview img {
+  width: 100vw; 
+  height: 280px;  
+  object-fit: cover; 
+  display: block; 
+}*/

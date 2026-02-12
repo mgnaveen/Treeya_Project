@@ -1,0 +1,715 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+
+.icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.header-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.badge {
+    position: absolute;
+    top: -6px;
+    right: -10px;
+    background: green;
+    color: rgb(63, 57, 57);
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+.slide-spic {
+    padding: 20px;
+    background: #f9f9f9;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2f4f2f;
+}
+
+.offer-slider {
+    position: relative;
+    max-width: 1300px;
+    margin: 40px auto;   
+    overflow: hidden;
+    border-radius: 16px;
+    background: #e2e7ef;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.slide {
+    display: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+}
+
+.slide h2 {
+    color: #2f8f2f;
+    margin-top: 10px;
+}
+
+.slide p {
+    margin-bottom: 14px;
+}
+
+.prev-btn,
+.next-btn {
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 26px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    z-index: 10;
+}
+
+.prev-btn {
+    left: 12px;
+}
+
+.next-btn {
+    right: 12px;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: #cccccc;
+    border-radius: 50%;
+    margin: 0 4px;
+}
+
+.dot.active {
+    background: #2f8f2f;
+}
+
+.home-body {
+    padding-left: 30px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+
+}
+
+
+.category-section {
+    padding: 70px 20px;
+    background:
+        radial-gradient(circle at top left, #fde2f3 0%, transparent 40%),
+        radial-gradient(circle at bottom right, #fff6ec 0%, transparent 45%),
+        linear-gradient(135deg, #ffffff, #fff7f1);
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.category-section::before,
+.category-section::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    background: rgba(245, 140, 198, 0.15);
+    border-radius: 50%;
+    filter: blur(60px);
+    z-index: 0;
+}
+
+.category-section::before {
+    top: -60px;
+    left: -60px;
+}
+
+.category-section::after {
+    bottom: -60px;
+    right: -60px;
+}
+
+.cat-title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 45px;
+    font-weight: 700;
+    color: #222;
+    position: relative;
+    z-index: 1;
+}
+
+.category-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 30px;
+    max-width: 800px;
+    padding-bottom: 40px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.category-item {
+    background: linear-gradient(145deg, #ffffff, #f6f1ec);
+    padding: 26px 12px;
+    border-radius: 26px;
+    text-align: center;
+    text-decoration: none;
+    color: #222 !important;
+    box-shadow:
+        inset 0 4px 0 rgb(240, 176, 2),     
+        inset 0 -4px 0 rgb(240, 176, 2),    
+        0 10px 30px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.35s ease;
+}
+
+.category-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.6),
+        /*rgb(240, 176, 2), */
+        transparent
+    );
+    transform: skewX(-20deg);
+    transition: left 0.6s ease;
+}
+
+.category-item:hover::before {
+    left: 140%;
+}
+
+.category-item:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow:
+        0 20px 50px /*rgba(0,0,0,0.18)*/ 
+        rgb(240, 176, 2)
+}
+
+.circle {
+    width: 130px;
+    height: 130px;
+    background: linear-gradient(145deg, #f1e2cc, #fff6e9);
+    border-radius: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    position: relative;
+    transition: transform 0.4s ease;
+}
+
+.circle img {
+    width: 160px;
+    transition: transform 0.4s ease;
+}
+
+.circle::after {
+    content: "";
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(245,140,198,0.4), transparent 70%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.category-item:hover .circle {
+    transform: scale(1.06) rotate(0deg);
+}
+
+.category-item:hover .circle img {
+    transform: scale(1.00);
+}
+
+.category-item:hover .circle::after {
+    opacity: 1;
+    transform: scale(1.10);
+}
+
+.category-item-text {
+    margin-top: 20px;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.4px;
+    position: relative;
+}
+
+.category-item-text::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, #f58cc6, #f1b3d1);
+    border-radius: 2px;
+    margin: 6px auto 0;
+    transition: width 0.4s ease;
+}
+
+.category-item:hover .category-item-text::after {
+    width: 60%;
+}
+
+/* ------------------------ Customer Reviews -------------------------- */
+
+.reviews-section {
+    text-align: center;
+    background: #f9faf6;
+    padding-bottom: 10px;
+}
+
+.review-title {
+    padding: 90px 20px 50px;
+    background: linear-gradient(135deg, #4a8329, #6ff05e);
+    color: #fff;
+}
+
+.review-title h3 {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+.review-title p {
+    font-size: 15px;
+    opacity: 0.9;
+    padding-bottom: 15px;
+}
+
+.review-stats {
+    max-width: 900px;
+    margin: -50px auto 60px;
+    background: #fff;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 30px;
+    border-radius: 22px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+}
+
+.stat-box h2 {
+    font-size: 32px;
+    color: #475809;
+}
+
+.stat-box span {
+    font-size: 14px;
+    color: #666;
+}
+
+.reviews-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.review-card {
+    background: #fff;
+    border-radius: 22px;
+    padding: 26px;
+    text-align: left;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-8px);
+}
+
+.stars {
+    color: #f5b400;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.review-text {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 16px;
+}
+
+.review-card h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #475809;
+}
+
+.review-extra {
+    margin-top: 50px;
+    font-size: 15px;
+    color: #444;
+}
+
+
+/* -------------------------------------------------------------------- */
+
+.seo-content {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    text-decoration: none;
+    color: #000;
+}
+
+/*-------------------Login and Signup--------------------------------*/
+.login-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    z-index: 999;
+}
+
+.login-panel {
+    position: fixed;
+    top: 0;
+    right: -380px;
+    width: 360px;
+    height: 100vh;
+    background: #fff;
+    padding: 30px;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+    transition: 0.4s ease;
+    z-index: 1000;
+}
+
+.login-panel.active {
+    right: 0;
+}
+
+.login-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.signup-panel {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 380px;
+    height: 100vh;
+    background: #fff;
+    padding: 30px;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.25);
+    transition: 0.4s ease;
+    z-index: 1001;
+}
+
+.signup-panel.active {
+    right: 0;
+}
+
+.login-submit, .signup-submit, .signup-link {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.login-submit { background: green; color: #fff; }
+.signup-submit { background: #007bff; color: #fff; }
+.signup-link { background: none; color: #007bff; border: none; font-weight: bold; cursor: pointer; }
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-size: 26px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.login-panel input, .signup-panel input {
+    width: 100%;
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.login-btn {
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: background-color 0.15s ease, color 0.15s ease, transform 0.1s ease;
+}
+
+.login-btn:hover {
+    background-color: #007bff;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+.login-btn {
+    cursor: pointer;
+}
+/*----------------------------------------------------*/
+
+
+/* Chat Toggle Button */
+.chat-toggle {
+    position: fixed;
+    z-index: 10000;
+    bottom: 20px;
+    right: 20px;
+    background:rgba(44, 73, 47, 0.63);
+    color: white;
+    font-size: 24px;
+    padding: 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+} 
+
+/* Chatbot Box */
+.chatbot {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 320px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+/* Header */
+.chat-header {
+    background: #007bff;
+    color: white;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Body */
+.chat-body {
+    height: 300px;
+    padding: 10px;
+    overflow-y: auto;
+    background: #f5f5f5;
+}
+
+/* Messages */
+.bot-message, .user-message {
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.bot-message {
+    background: #e0e0e0;
+    align-self: flex-start;
+}
+
+.user-message {
+    background: #007bff;
+    color: white;
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+
+
+
+
+/* ---------------- ABOUT SECTION CLEAN ---------------- */
+
+.about-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.about-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.about-intro {
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+.about-intro h2 {
+    font-size: 30px;
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+.about-intro p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.about-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.about-card,
+.content-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.about-card h3,
+.content-card h3 {
+    color: #2e7d32;
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.about-card p,
+.content-card p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #555;
+}
+
+
+/* ---------------- RESPONSIVE DESIGN ---------------- */
+
+@media (max-width: 1024px) {
+    .offer-slider {
+        margin: 20px auto;
+    }
+
+    .review-stats {
+        margin: -40px 20px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    header nav {
+        display: none;   /* Hide nav for small screens (optional) */
+    }
+
+    .home-body {
+        padding-left: 15px;
+        padding-top: 15px;
+    }
+
+    .cat-title {
+        margin-bottom: 25px;
+    }
+
+    .category-section {
+        padding: 40px 15px;
+    }
+
+    .about-section {
+        padding: 40px 15px;
+    }
+
+    .review-title {
+        padding: 60px 15px 40px;
+    }
+
+    .review-stats {
+        grid-template-columns: 1fr;
+        margin: -30px 15px 30px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .review-title h3 {
+        font-size: 22px;
+    }
+
+    .about-intro h2 {
+        font-size: 22px;
+    }
+
+    .circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .circle img {
+        width: 120px;
+    }
+
+    .login-panel,
+    .signup-panel {
+        width: 100%;
+    }
+
+    .chatbot {
+        width: 90%;
+        right: 5%;
+    }
+}
