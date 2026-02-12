@@ -1,6 +1,6 @@
 
 .about-bg {
-    background-image: url('../assets/FieldPic.png');
+    background-image: url('assets/FieldPic.png');
     background-size: cover;
     background-position: center;
     padding: 140px 20px;
