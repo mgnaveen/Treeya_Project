@@ -120,8 +120,8 @@ document.addEventListener("DOMContentLoaded", () => {
     checkoutBtn.onclick = () => {
       const cart = getCart();
       window.location.href = cart.length === 0
-        ? "../HTML/product.html"
-        : "../HTML/checkout.html";
+        ? "product.html"
+        : "checkout.html";
     };
   }
 

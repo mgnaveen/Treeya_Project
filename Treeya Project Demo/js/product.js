@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function goToDetail(product) {
     localStorage.setItem("selectedProduct", JSON.stringify(product));
-    window.location.href = "../HTML/product-detail.html";
+    window.location.href = "product-detail.html";
   }
 
   function render(list) {
@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       render(filteredProducts);
 
-      history.pushState({}, "", `../HTML/product.html?category=${encodeURIComponent(cat)}`);
+      history.pushState({}, "", `product.html?category=${encodeURIComponent(cat)}`);
     });
   });
 

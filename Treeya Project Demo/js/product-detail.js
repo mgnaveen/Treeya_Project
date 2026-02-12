@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!product) {
     alert("Product not found");
-    window.location.href = "../HTML/product.html";
+    window.location.href = "product.html";
     return;
   }
 
@@ -147,7 +147,7 @@ function updatePrice() {
 
   if (cartIcon) {
     cartIcon.onclick = () => {
-      window.location.href = "../HTML/cart.html";
+      window.location.href = "cart.html";
     };
   }
 

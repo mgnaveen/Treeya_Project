@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const q = searchInput.value.trim();
                 if (q) {
                     window.location.href =
-                        `../HTML/product.html?search=${encodeURIComponent(q)}`;
+                        `product.html?search=${encodeURIComponent(q)}`;
                 }
             }
         });
@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const cartIcon = document.getElementById("cartIcon");
 
     cartIcon?.addEventListener("click", () => {
-        window.location.href = "../HTML/cart.html";
+        window.location.href = "cart.html";
     });
 
 });
