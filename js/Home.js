@@ -203,39 +203,32 @@ const chatBody = document.getElementById("chatBody");
 /* ===============================
    Open Chat
 ================================ */
-chatToggle.onclick = () => {
-    chatbot.style.display = "flex";
+if (chatToggle && chatbot && closeChat && sendBtn && userInput && chatBody) {
 
-    // Disable slider interaction when chat is open
-    const slider = document.querySelector(".offer-slider");
-    if (slider) {
-        slider.style.pointerEvents = "none";
-    }
-};
+    chatToggle.onclick = () => {
+        chatbot.style.display = "flex";
 
-/* ===============================
-   Close Chat
-================================ */
-closeChat.onclick = () => {
-    chatbot.style.display = "none";
+        const slider = document.querySelector(".offer-slider");
+        if (slider) slider.style.pointerEvents = "none";
+    };
 
-    // Enable slider interaction when chat is closed
-    const slider = document.querySelector(".offer-slider");
-    if (slider) {
-        slider.style.pointerEvents = "auto";
-    }
-};
+    closeChat.onclick = () => {
+        chatbot.style.display = "none";
 
-/* ===============================
-   Send Message
-================================ */
-sendBtn.onclick = sendMessage;
+        const slider = document.querySelector(".offer-slider");
+        if (slider) slider.style.pointerEvents = "auto";
+    };
 
-userInput.addEventListener("keypress", (e) => {
-    if (e.key === "Enter") {
-        sendMessage();
-    }
-});
+    sendBtn.onclick = sendMessage;
+
+    userInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+            sendMessage();
+        }
+    });
+
+}
+;
 
 /* ===============================
    Send Message Function
@@ -293,9 +286,11 @@ function botReply(userMsg) {
 document.addEventListener("DOMContentLoaded", () => {
     const adminNav = document.getElementById("adminNav");
 
-    if (localStorage.getItem("adminLogged") === "true") {
-        adminNav.style.display = "inline-block";
-    } else {
-        adminNav.style.display = "none";
+    if (adminNav) {
+        if (localStorage.getItem("adminLogged") === "true") {
+            adminNav.style.display = "inline-block";
+        } else {
+            adminNav.style.display = "none";
+        }
     }
 });
