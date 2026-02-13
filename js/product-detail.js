@@ -400,7 +400,6 @@ const productRecipes = {
   ], 
 };
 
-
 /* ========= PRODUCT BENEFITS ========= */
 
 const productBenefits = {
