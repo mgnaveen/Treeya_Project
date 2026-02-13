@@ -26,7 +26,7 @@
   { "name": "Ponni Raw Rice", "category": "Rice", "price": 90, "image": "assets/rice/Ponni Boiled Rice.jpg","description":"Origin: Tamil Nadu, India | Benefits: Soft-cooking / Versatile / Easy-digest / Family-favorite / Light-texture | Ponni Rice"},
 
   { "name": "Kambu Flour", "category": "Flour", "price": 120, "image": "assets/flour/Kambu flour.jpg","description":"Origin: Africa (Sahel region) | Benefits: High-fiber/ Iron-rich/ Calcium-rich/ Diabetes-friendly/ Heart-healthy/ Gluten-free/ Energy-boosting | Pearl Millet Flour"},
-  { "name": "Kavuni Flour", "category": "Flour", "price": 120, "image": "../assets/flour/Kavuni Rice Flour.jpg","description":"Origin: South India, Tamil Nadu |Benefits: Antioxidant-rich/High-fiber/Iron-rich/Diabetes-friendly/Heart-healthy/Gluten-free | Black Kavuni Rice Flour"},
+  { "name": "Kavuni Flour", "category": "Flour", "price": 120, "image": "assets/flour/Kavuni Rice Flour.jpg","description":"Origin: South India, Tamil Nadu |Benefits: Antioxidant-rich/High-fiber/Iron-rich/Diabetes-friendly/Heart-healthy/Gluten-free | Black Kavuni Rice Flour"},
   { "name": "Ragi Flour", "category": "Flour", "price": 120, "image": "assets/flour/ragi Flour.jpg","description":"Origin: East Africa (Ethiopia–Uganda region) | Benefits: Calcium-rich/High-fiber/Diabetes-friendly/Bone-strengthening/Iron-rich/Gluten-free | Ragi Flour (Finger Millet Flour)"},
 
   { "name": "Cholam Biscuit", "category": "Snacks", "price": 90, "image": "assets/biscuit/Cholam Bis.jpg" },
