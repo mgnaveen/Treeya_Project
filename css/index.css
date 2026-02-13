@@ -45,7 +45,7 @@ h1 {
     margin: 40px auto;   
     overflow: hidden;
     border-radius: 16px;
-    background: #e2e7ef;
+    background: #edeea5;
     box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
@@ -118,9 +118,13 @@ h1 {
 
 .home-body {
     padding-left: 30px;
-    padding-top: 25px;
-    padding-bottom: 10px;
+    padding-top: 130px;
+    padding-bottom: 10px; 
 
+    background-image: url('../assets/Background Image/Background image.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
 }
 
 
@@ -178,7 +182,36 @@ h1 {
     z-index: 1;
 }
 
+
+
+
+
 .category-item {
+    background: rgba(255, 255, 255, 0.1);   /* Transparent */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    padding: 20px 12px;
+    border-radius: 26px;
+    text-align: center;
+    text-decoration: none;
+    color: #222 !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    box-shadow:
+        inset 0 4px 0 rgb(240, 176, 2),
+        inset 0 -4px 0 rgb(240, 176, 2),
+        0 10px 30px rgba(0,0,0,0.15);
+
+    position: relative;
+    overflow: hidden;
+    transition: all 0.35s ease;
+}
+
+
+
+/*.category-item {
     background: linear-gradient(145deg, #ffffff, #f6f1ec);
     padding: 26px 12px;
     border-radius: 26px;
@@ -192,7 +225,7 @@ h1 {
     position: relative;
     overflow: hidden;
     transition: all 0.35s ease;
-}
+}*/
 
 .category-item::before {
     content: "";
@@ -204,7 +237,7 @@ h1 {
     background: linear-gradient(
         120deg,
         transparent,
-        rgba(255,255,255,0.6),
+        /*rgba(255,255,255,0.6),*/
         /*rgb(240, 176, 2), */
         transparent
     );
@@ -299,9 +332,10 @@ h1 {
 }
 
 .review-title {
-    padding: 90px 20px 50px;
-    background: linear-gradient(135deg, #4a8329, #6ff05e);
-    color: #fff;
+    padding: 60px 20px 50px;
+    /*background: linear-gradient(135deg, #f5e23c, #e9eb7a);*/
+    /*background: rgb(252, 186, 4);*/
+    color: #e6bd38;
 }
 
 .review-title h3 {

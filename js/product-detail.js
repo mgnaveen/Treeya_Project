@@ -53,6 +53,24 @@ productImages.forEach((src, index) => {
   productThumbs.appendChild(thumb);
 });
 
+const mainImageContainer = document.querySelector(".product-main-image");
+
+mainImageContainer.addEventListener("mousemove", function (e) {
+
+  const rect = mainImageContainer.getBoundingClientRect();
+
+  const x = ((e.clientX - rect.left) / rect.width) * 100;
+  const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+  imgEl.style.transformOrigin = `${x}% ${y}%`;
+  imgEl.style.transform = "scale(2)";
+});
+
+mainImageContainer.addEventListener("mouseleave", function () {
+  imgEl.style.transform = "scale(1)";
+});
+
+
     nameEl.textContent = product.name;
     descriptionEl.textContent = product.description || "No description available.";
 
@@ -383,6 +401,68 @@ const productRecipes = {
 };
 
 
+/* ========= PRODUCT BENEFITS ========= */
+
+const productBenefits = {
+
+  "Barnyard (or) Kuthuravali Millet": [
+    "Rich in fiber and protein",
+    "Helps control blood sugar",
+    "Supports weight management",
+    "Improves digestion"
+  ],
+
+  "Finger (or) Ragi Millet": [
+    "High in calcium",
+    "Strengthens bones",
+    "Good for growing children",
+    "Boosts energy levels"
+  ],
+
+  "Foxtail (or) Thinai Millet": [
+    "Low glycemic index",
+    "Heart-friendly grain",
+    "Improves metabolism",
+    "Gluten-free and easy to digest"
+  ],
+
+  "Seera Samba Raw Rice": [
+    "Traditional aromatic rice",
+    "Perfect for biryani",
+    "Easy digestion",
+    "Rich in natural nutrients"
+  ],
+
+  "Mapillai Samba Rice": [
+    "Improves stamina",
+    "Rich in iron",
+    "Boosts immunity",
+    "Traditional heritage rice"
+  ],
+
+  "Black Kavuni Rice": [
+    "High in antioxidants",
+    "Supports heart health",
+    "Improves skin glow",
+    "Ancient medicinal rice"
+  ],
+
+  "Kambu Flour": [
+    "Rich in iron",
+    "Boosts energy",
+    "Supports digestive health",
+    "Good for diabetics"
+  ],
+
+  "Ragi Flour": [
+    "High calcium content",
+    "Strengthens bones",
+    "Improves hemoglobin",
+    "Supports weight loss"
+  ]
+};
+
+
 const recipeSection = document.getElementById("recipeSection");
 const recipeMainImg = document.getElementById("recipeMainImg");
 const recipeThumbs = document.getElementById("recipeThumbs");
@@ -437,6 +517,26 @@ modal.onclick = e => {
 };
 
 
+/* ========= LOAD BENEFITS ========= */
+
+const benefitList = document.getElementById("benefitList");
+
+if (benefitList) {
+
+  const benefits = productBenefits[productName];
+
+  if (!benefits || benefits.length === 0) {
+
+    benefitList.innerHTML = "<li>No benefits available.</li>";
+
+  } else {
+
+    benefitList.innerHTML = benefits
+      .map(item => `<li>${item}</li>`)
+      .join("");
+
+  }
+}
 
 
 
