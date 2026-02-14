@@ -1,5 +1,9 @@
 /* ================= HERO SECTION ================= */
 
+* {
+    box-sizing: border-box;
+}
+
 .about-bg {
     background-image: url('../assets/FieldPic.png');
     background-size: cover;
@@ -71,7 +75,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: clamp(16px, 3vw, 30px);
-    margin-top: 50px;
+    margin-top: clamp(30px, 5vw, 50px);
 }
 
 .about-card {
@@ -85,6 +89,13 @@
 .about-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+}
+
+@media (hover: none) {
+    .about-card:active {
+        transform: translateY(-4px);
+        box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+    }
 }
 
 .about-card h3 {
@@ -113,6 +124,12 @@
 
 .content-card:hover {
     transform: translateY(-6px);
+}
+
+@media (hover: none) {
+    .content-card:active {
+        transform: translateY(-3px);
+    }
 }
 
 .content-card h3 {
@@ -190,5 +207,64 @@
     .about-card p,
     .content-card p {
         font-size: 14px;
+    }
+}
+
+/* ================= VERY SMALL PHONES (360px) ================= */
+
+@media (max-width: 360px) {
+
+    .about-bg {
+        padding: 60px 12px;
+        justify-content: center;
+    }
+
+    .about-bg h1 {
+        font-size: clamp(20px, 4vw, 28px);
+    }
+
+    .about-intro h2 {
+        font-size: clamp(18px, 3vw, 24px);
+        margin-bottom: 10px;
+    }
+
+    .about-intro p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .about-cards {
+        gap: 12px;
+        margin-top: 20px;
+    }
+
+    .about-card {
+        padding: 16px;
+        border-radius: 12px;
+    }
+
+    .about-card h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .about-card p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .content-card {
+        padding: 18px;
+        margin-bottom: 25px;
+        border-radius: 12px;
+    }
+
+    .content-card h3 {
+        font-size: clamp(16px, 2.5vw, 20px);
+        margin-bottom: 12px;
+    }
+
+    .content-card p {
+        font-size: 13px;
     }
 }

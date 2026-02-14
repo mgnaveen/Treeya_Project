@@ -1,3 +1,9 @@
+/* ================= GLOBAL ================= */
+
+* {
+  box-sizing: border-box;
+}
+
 /* ================= MAIN CONTAINER ================= */
 
 .detail-container {
@@ -87,6 +93,12 @@
 
 .product-main-image img:hover {
   transform: scale(1.3);
+}
+
+@media (hover: none) {
+  .product-main-image img:active {
+    transform: scale(1.15);
+  }
 }
 
 /* ================= TEXT + DETAILS ================= */
@@ -208,6 +220,12 @@
   transform: translateY(-4px);
 }
 
+@media (hover: none) {
+  .related-card:active {
+    transform: translateY(-2px);
+  }
+}
+
 .related-card img {
   width: 100%;
   height: 110px;
@@ -266,6 +284,12 @@
 
 .recipe-thumbs img:hover {
   transform: scale(1.05);
+}
+
+@media (hover: none) {
+  .recipe-thumbs img:active {
+    transform: scale(1.02);
+  }
 }
 
 
@@ -377,6 +401,99 @@
 
   #rightPrice {
     font-size: 22px;
+  }
+
+  .recipe-layout {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .product-extra {
+    padding: 0 15px;
+  }
+
+  .recipe-title,
+  .benefit-title {
+    font-size: 22px;
+  }
+
+  .recipe-preview img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* ================= VERY SMALL PHONES (360px) ================= */
+
+@media (max-width: 360px) {
+
+  .detail-container {
+    padding: 20px 12px;
+  }
+
+  .product-layout {
+    gap: 20px;
+  }
+
+  .product-right {
+    min-width: 100%;
+    padding: 16px;
+  }
+
+  .product-main-image img {
+    height: 240px;
+  }
+
+  #name {
+    font-size: 20px;
+  }
+
+  #price,
+  #rightPrice {
+    font-size: 20px;
+  }
+
+  .qty-box button {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+
+  #weightSelect {
+    width: 100%;
+  }
+
+  .add-to-cart,
+  .buy-now {
+    padding: 12px 0;
+    font-size: 14px;
+  }
+
+  .related-section {
+    padding: 0 12px;
+  }
+
+  .recipe-layout {
+    flex-direction: column;
+  }
+
+  .recipe-thumbs {
+    gap: 8px;
+  }
+
+  .recipe-thumbs img {
+    width: 70px;
+    height: 55px;
+  }
+
+  .recipe-title,
+  .benefit-title {
+    font-size: 18px;
+  }
+
+  .benefit-content li {
+    font-size: 14px;
+    line-height: 1.6;
   }
 }
 

@@ -56,6 +56,12 @@ body {
   color: #003d2a;
 }
 
+@media (hover: none) {
+  .glass-header nav a:active {
+    color: #004d35;
+  }
+}
+
 .right {
   display: flex;
   align-items: center;
@@ -82,6 +88,12 @@ body {
 
 .icon:hover {
   transform: scale(1.1);
+}
+
+@media (hover: none) {
+  .icon:active {
+    transform: scale(1.05);
+  }
 }
 
 .badge {
@@ -138,6 +150,12 @@ body {
   color: #9ccc65;
 }
 
+@media (hover: none) {
+  .footer-column a:active {
+    color: #7db93e;
+  }
+}
+
 .footer-bottom {
   background-color: #0f1e0f;
   text-align: center;
@@ -169,6 +187,13 @@ body {
 #product1 .pro:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+@media (hover: none) {
+  #product1 .pro:active {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  }
 }
 
 #product1 .pro img {
@@ -275,5 +300,60 @@ body {
 
   .icon {
     font-size: 16px;
+  }
+}
+
+/* ================= VERY SMALL PHONES (360px) ================= */
+
+@media (max-width: 360px) {
+
+  .glass-header {
+    padding: 12px 10px;
+  }
+
+  .logo {
+    height: 28px;
+  }
+
+  .brand {
+    font-size: 14px;
+  }
+
+  .icon {
+    font-size: 14px;
+  }
+
+  .badge {
+    font-size: 10px;
+    padding: 1px 4px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .footer-column h3,
+  .footer-column.brand h2 {
+    font-size: 18px;
+  }
+
+  .footer-column a {
+    font-size: 13px;
+  }
+
+  .footer-bottom {
+    font-size: 11px;
+    padding: 12px 8px;
+  }
+
+  #product1 .pro-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 12px;
+  }
+
+  #product1 .pro {
+    padding: 10px;
   }
 }

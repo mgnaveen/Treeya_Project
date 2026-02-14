@@ -1,4 +1,12 @@
 /* ===============================
+   GLOBAL
+================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+/* ===============================
    CART LAYOUT
 ================================= */
 
@@ -36,6 +44,12 @@
 
 .cart-item:hover {
   background: #f9f9f9;
+}
+
+@media (hover: none) {
+  .cart-item:active {
+    background: #f5f5f5;
+  }
 }
 
 .cart-img {
@@ -101,6 +115,13 @@
   transform: scale(1.05);
 }
 
+@media (hover: none) {
+  .cart-item .remove:active {
+    background: darkred;
+    transform: scale(1.02);
+  }
+}
+
 /* ===============================
    SUMMARY SECTION
 ================================= */
@@ -139,6 +160,12 @@
 
 .pay-btn:hover {
   transform: translateY(-2px);
+}
+
+@media (hover: none) {
+  .pay-btn:active {
+    transform: translateY(-1px);
+  }
 }
 
 .outline-btn {
@@ -194,6 +221,12 @@
   background-color: #45a049;
 }
 
+@media (hover: none) {
+  .empty-cart button.continue-btn:active {
+    background-color: #3d8b40;
+  }
+}
+
 /* ===============================
    BACK BUTTON
 ================================= */
@@ -215,6 +248,17 @@
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   z-index: 999;
   transition: transform 0.2s ease;
+}
+
+.back-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+
+@media (hover: none) {
+  .back-btn:active {
+    transform: scale(1.05);
+  }
 }
 
 /* ===============================

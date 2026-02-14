@@ -69,6 +69,13 @@ body {
   transform: translateX(4px);
 }
 
+@media (hover: none) {
+  .category-item:active {
+    background: #ececec;
+    transform: translateX(2px);
+  }
+}
+
 .circle {
   width: 45px;
   height: 45px;
@@ -131,6 +138,12 @@ body {
   transform: translateY(-4px);
 }
 
+@media (hover: none) {
+  .product-card:active {
+    transform: translateY(-2px);
+  }
+}
+
 .product-card img {
   width: 100%;
   height: 150px;
@@ -161,6 +174,12 @@ body {
 
 .product-card button:hover {
   background: #f7ca00;
+}
+
+@media (hover: none) {
+  .product-card button:active {
+    background: #f0bf00;
+  }
 }
 
 /* ================= STOCK LABEL ================= */
@@ -252,6 +271,85 @@ body {
 
   .category-item-text {
     font-size: 13px;
+  }
+}
+
+/* ================= VERY SMALL PHONES (360px) ================= */
+
+@media (max-width: 360px) {
+
+  .main-wrapper {
+    flex-direction: column;
+  }
+
+  .category-container {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    overflow-x: auto;
+    position: relative;
+    top: 0;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .category-item {
+    min-width: 120px;
+    gap: 8px;
+    padding: 6px 8px;
+  }
+
+  .circle {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+  }
+
+  .category-item-text {
+    font-size: 12px;
+  }
+
+  .product-section {
+    padding: 12px;
+  }
+
+  .product-container {
+    padding: 12px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .product-card {
+    padding: 8px;
+  }
+
+  .product-card img {
+    height: 100px;
+  }
+
+  .product-card h3 {
+    font-size: 12px;
+    margin: 6px 0 2px;
+  }
+
+  .product-card .price {
+    font-size: 11px;
+  }
+
+  .product-card button {
+    font-size: 11px;
+    padding: 4px 0;
+    margin-top: 6px;
+  }
+
+  .product-card .stock-label {
+    padding: 2px 6px;
+    font-size: 9px;
   }
 }
 
