@@ -404,62 +404,270 @@ const productRecipes = {
 
 const productBenefits = {
 
-  "Barnyard (or) Kuthuravali Millet": [
-    "Rich in fiber and protein",
-    "Helps control blood sugar",
-    "Supports weight management",
-    "Improves digestion"
+
+  "Pearl (or) Kambu Millet": [
+    "Rich in dietary fiber – supports digestion and gut health",
+    "High in iron and magnesium – helps prevent anemia and improves bone strength",
+    "Low glycemic index – aids in blood sugar control",
+    "Gluten-free grain – suitable for people with gluten intolerance",
+    "High antioxidant content – reduces inflammation and oxidative stress",
+    "Supports heart health – helps lower cholesterol and regulate blood pressure" 
   ],
 
   "Finger (or) Ragi Millet": [
-    "High in calcium",
-    "Strengthens bones",
-    "Good for growing children",
-    "Boosts energy levels"
+    "Rich in Calcium & Iron – Supports strong bones, teeth, and prevents anemia.",
+    "High Dietary Fiber – Aids digestion, improves gut health, and promotes satiety.",
+    "Low Glycemic Index – Helps regulate blood sugar levels; suitable for diabetics.",
+    "Good Source of Plant Protein – Supports muscle health and overall body repair.",
+    "Heart Health Support – Reduces bad cholesterol and improves cardiovascular health.",
+    "Natural Antioxidants – Boost immunity and help combat inflammation and aging."    
   ],
 
   "Foxtail (or) Thinai Millet": [
-    "Low glycemic index",
-    "Heart-friendly grain",
-    "Improves metabolism",
-    "Gluten-free and easy to digest"
+    "Rich in dietary fiber, supports healthy digestion",
+    "Low glycemic index, helps regulate blood sugar levels",
+    "Good source of plant-based protein and essential amino acids",
+    "High in antioxidants, reduces inflammation and oxidative stress",
+    "Supports heart health by lowering bad cholesterol (LDL)",
+    "Enhances immunity and overall metabolic health"   
   ],
 
-  "Seera Samba Raw Rice": [
-    "Traditional aromatic rice",
-    "Perfect for biryani",
-    "Easy digestion",
-    "Rich in natural nutrients"
+  "Barnyard (or) Kuthuravali Millet": [
+    "Rich in dietary fiber – supports digestion and gut health",
+    "Low glycemic index – helps control blood sugar levels",
+    "Good source of iron and minerals – supports energy and hemoglobin levels",
+    "Gluten-free grain – suitable for people with gluten intolerance",
+    "Aids in weight management – keeps you fuller for longer",
+    "Supports heart health – helps reduce bad cholesterol (LDL)"   
+  ],
+
+  "Little (or) Saamai Millet": [
+    "Rich in dietary fiber – supports digestion and gut health",
+    "Low glycemic index – helps control blood sugar levels",
+    "High in antioxidants – reduces oxidative stress",
+    "Good source of iron and minerals – supports energy and immunity",
+    "Naturally gluten-free – suitable for gluten sensitivity",
+    "Supports heart health – helps manage cholesterol levels"    
+  ],
+
+  "Kodo (or) Varagu Millet": [
+    "Rich in dietary fiber, supporting healthy digestion and gut health",
+    "Low glycaemic index, helping in blood sugar control for diabetics",
+    "Good source of antioxidants, aiding in reducing oxidative stress",
+    "Naturally gluten-free, suitable for people with gluten intolerance",
+    "Supports weight management by promoting satiety and metabolism",
+    "Helps improve heart health by lowering bad cholesterol (LDL)" 
+  ],
+
+
+
+
+
+  "Black Kavuni Rice": [
+    "Rich in anthocyanins and antioxidants", 
+    "High in fiber for digestive health", 
+    "Helps regulate blood sugar levels", 
+    "Supports heart health and reduces cholesterol", 
+    "Anti-inflammatory properties", 
+    "Aid in weight management" 
+  ],
+
+  "Karugu Kuruvai Rice": [
+    "Deep black color rich in antioxidants ",
+    "Excellent source of magnesium",
+    "Supports cardiovascular health",
+    "Reduces inflammation",
+    "Aids in detoxification ",
+    "Improves bone density"
+  ],
+
+  "Kattu Yanam Rice": [
+    "Rich in iron (prevents anemia)",
+    "Contains essential minerals ",
+    "High in fiber",
+    "Promotes healthy digestion",
+    "Boosts immunity ",
+    "Traditional healing rice for strength"
+  ], 
+
+  "Kullakar Rice": [
+    "Ancient heritage variety",
+    "Rich in unique proteins",
+    "Aids in tissue repair",
+    "Supports muscle development",
+    "Contains essential trace minerals",
+    "Traditional strength-building grain"
   ],
 
   "Mapillai Samba Rice": [
-    "Improves stamina",
-    "Rich in iron",
-    "Boosts immunity",
-    "Traditional heritage rice"
+    "Known as “Bridegroom’s Rice” for vitality",
+    "Enhances energy and stamina",
+    "Rich in iron and protein",
+    "Supports sexual health and vitality",
+    "Aids digestion",
+    "Boosts overall strength"
   ],
 
-  "Black Kavuni Rice": [
-    "High in antioxidants",
-    "Supports heart health",
-    "Improves skin glow",
-    "Ancient medicinal rice"
+  "Poongar Rice": [
+    "Highest iron content among rice varieties",
+    "Excellent for anemia prevention",
+    "Rich in B vitamins",
+    "Supports energy metabolism",
+    "Enhances blood quality",
+    "Traditional strength-building rice"  
   ],
+
+  "Swarna Masuri": [
+    "Light and easily digestible",
+    "Rich in thiamine (Vitamin B1) and niacin",
+    "Low in fat content",
+    "Supports nervous system health",
+    "Helps maintain blood pressure",
+    "Contains essential amino acids"
+  ],
+
+  "Idly Rice": [
+    "Ideal for fermentation (increases vitamin B)",
+    "High in iron and phosphorus",
+    "Supports energy production",
+    "Promotes good digestion when fermented",
+    "Low glycemic index",
+    "Contains beneficial probiotics after fermentation"  
+  ],
+
+  "Red Rice": [
+    "Rich in anthocyanins (red pigment)",
+    "High in magnesium and manganese",
+    "Aids in bone health and strength",
+    "Natural stress reliever",
+    "Anti-inflammatory properties",
+    "Supports immune system"
+  ],
+
+  "Rathasali": [
+    "Deep red heirloom variety",
+    "Extremely high in antioxidants",
+    "Rich in flavonoids",
+    "Anti-inflammatory",
+    "Supports heart health",
+    "Anti-diabetic properties"
+  ],
+
+  "Kichali Samba": [
+    "Small grain, easily digestible",
+    "Rich in iron and minerals",
+    "Good for lactation",
+    "Aids in post-delivery recovery",
+    "High nutritional density",
+    "Traditional postpartum food"
+  ],
+
+  "Navara Rice": [
+    "Ancient medicinal rice",
+    "Used in Ayurvedic treatments",
+    "High in antioxidants",
+    "Anti-inflammatory properties",
+    "Supports skin health",
+    "Enhances immunity"
+    ],
+  
+
+  "Thooyamalli Boiled": [
+    "Pre-boiled retains nutrients",
+    "High in minerals from hull",
+    "Aids in calcium absorption",
+    "Supports bone health",
+    "Better nutrient bioavailability",
+    "Helps regulate digestion"
+  ],
+
+  "Ponni Boiled": [
+    "Medium grain, versatile variety",
+    "Easier digestion after boiling",
+    "Contains retained minerals",
+    "Promotes gut health",
+    "Light and suitable for daily use",
+    "Affordable and nutritious"
+  ],
+
+  "Kerala Matta": [
+    "Short grain, sticky when cooked",
+    "High in resistant starch",
+    "Supports gut bacteria",
+    "Low glycemic index",
+    "Contains fiber and minerals",
+    "Unique aromatic properties" 
+  ],
+
+  "Thanga Samba": [
+    "Golden/brown variety",
+    "Rich in antioxidants",
+    "Contains essential minerals",
+    "Anti-aging properties",
+    "Aids circulation",
+    "Balances body heat" 
+  ],
+
+  "Illupaipoo Samba": [
+    "Aromatic heritage variety",
+    "High in essential oils",
+    "Aid digestion naturally",
+    "Possesses cooling properties",
+    "Rich flavor and nutrients",
+    "Traditional medicinal rice"  
+  ],
+
+  "Seera Samba Raw Rice": [
+    "Finest fragrant rice variety",
+    "Contains aromatic essential oils",
+    "Aid in digestion",
+    "Natural flavor without additives",
+    "Contains beneficial minerals",
+    "Premium nutritional profile"  
+  ],
+
+  "Ponni Raw Rice": [
+    "Medium grain, versatile variety",
+    "Easier digestion after boiling",
+    "Contains retained minerals",
+    "Promotes gut health",
+    "Light and suitable for daily use",
+    "Affordable and nutritious"
+  ],
+
+
+
+
 
   "Kambu Flour": [
-    "Rich in iron",
-    "Boosts energy",
-    "Supports digestive health",
-    "Good for diabetics"
+    "Rich in dietary fiber – supports digestion and gut health",
+    "High in iron and magnesium – helps prevent anemia and improves bone strength",
+    "Low glycemic index – aids in blood sugar control",
+    "Gluten-free grain – suitable for people with gluten intolerance",
+    "High antioxidant content – reduces inflammation and oxidative stress",
+    "Supports heart health – helps lower cholesterol and regulate blood pressure"
+  ],
+
+  "Kavuni Flour": [
+    "Rich in anthocyanins and antioxidants", 
+    "High in fiber for digestive health", 
+    "Helps regulate blood sugar levels", 
+    "Supports heart health and reduces cholesterol", 
+    "Anti-inflammatory properties", 
+    "Aid in weight management"
   ],
 
   "Ragi Flour": [
-    "High calcium content",
-    "Strengthens bones",
-    "Improves hemoglobin",
-    "Supports weight loss"
-  ]
+    "Rich in Calcium & Iron – Supports strong bones, teeth, and prevents anemia.",
+    "High Dietary Fiber – Aids digestion, improves gut health, and promotes satiety.",
+    "Low Glycemic Index – Helps regulate blood sugar levels; suitable for diabetics.",
+    "Good Source of Plant Protein – Supports muscle health and overall body repair.",
+    "Heart Health Support – Reduces bad cholesterol and improves cardiovascular health.",
+    "Natural Antioxidants – Boost immunity and help combat inflammation and aging."
+  ],
+
 };
+
 
 
 const recipeSection = document.getElementById("recipeSection");

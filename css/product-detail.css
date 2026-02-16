@@ -239,7 +239,7 @@
 
 .product-extra {
   margin-top: 30px;
-  padding: 15px 350px 15px 40px;
+  padding: 15px 100px 15px 40px;
 }
 
 /* MAIN FLEX CONTAINER */
@@ -303,14 +303,16 @@
 }
 
 /* RIGHT SIDE (Benefits) */
+
 .benefit-section {
-  flex: 1;
-  padding-top: 20px;
+  flex: 2;
+  padding-top: 40px;
   padding-bottom: 20px;
 }
 
+
 .benefit-header {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .benefit-title {
@@ -319,8 +321,9 @@
   color: #1b5e20;
 }
 
+
 .benefit-content ul {
-  list-style: none;
+  list-style: none;   
   padding-left: 0;
   margin-top: 15px;
 }
@@ -329,10 +332,11 @@
   position: relative;
   padding-left: 28px;
   margin-bottom: 12px;
-  font-size: 16px;
-  color: #09418f;
-  line-height: 1.8;
+  font-size: 20px;
+  color: #09418f;       /*#444;*/
+  line-height: 2;
 }
+
 
 .benefit-content li::before {
   content: "✔";
@@ -342,6 +346,21 @@
   font-size: 14px;
   color: #2e7d32;
   font-weight: bold;
+}
+
+
+@media (max-width: 992px) {
+  .benefit-section {
+    padding-top: 40px;
+  }
+
+  .benefit-title {
+    font-size: 22px;
+  }
+
+  .benefit-content li {
+    font-size: 15px;
+  }
 }
 
 /* ================= IMAGE MODAL ================= */
