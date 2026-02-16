@@ -120,19 +120,58 @@
     transform: scale(1.2);
 }
 
-/* Responsive */
+/* ================= TABLET ================= */
+
+@media (max-width: 1024px) {
+    .offer-slider {
+        height: 300px;
+    }
+}
+
+/* ================= MOBILE ================= */
+
 @media (max-width: 768px) {
+
     .offer-slider {
         height: 220px;
     }
 
     .prev-btn,
     .next-btn {
-        width: 40px;
-        height: 40px;
+        width: 36px;
+        height: 36px;
         font-size: 16px;
     }
+
+    .prev-btn {
+        left: 8px;
+    }
+
+    .next-btn {
+        right: 8px;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+    }
 }
+
+/* ================= SMALL PHONES ================= */
+
+@media (max-width: 480px) {
+
+    .offer-slider {
+        height: 180px;
+    }
+
+    .prev-btn,
+    .next-btn {
+        display: none;   /* Hide arrows on very small screens */
+    }
+
+}
+
 
 .home-body {
     padding-left: 30px;
