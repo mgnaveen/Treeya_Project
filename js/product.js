@@ -22,6 +22,27 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = "product-detail.html";
   }
 
+  /*function goToDetail(product) {
+
+  // ❌ If NOT logged in → show login popup
+  if (!localStorage.getItem("user_id")) {
+
+    // Save product temporarily
+    localStorage.setItem("pendingProduct", JSON.stringify(product));
+
+    // Open login popup
+    if (typeof openAuth === "function") {
+      openAuth();
+    }
+
+    return; // stop here
+  }
+
+  // ✅ If logged in → continue normally
+  localStorage.setItem("selectedProduct", JSON.stringify(product));
+  window.location.href = "product-detail.html";
+}*/
+
   function render(list) {
     container.innerHTML = "";
 

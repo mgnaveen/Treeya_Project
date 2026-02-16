@@ -27,52 +27,45 @@
     border-radius: 50%;
 }
 
+/* Remove any container restriction */
 .slide-spic {
-    padding: 20px;
-    background: #f9f9f9;
-    color: #333;
+    padding: 0;
+    margin: 0;
+    width: 100%;
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #2f4f2f;
-}
-
+/* FULL WIDTH SLIDER */
 .offer-slider {
     position: relative;
-    max-width: auto;
-    margin: 40px auto;   
+    width: 100vw;                     /* Full screen width */
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;               /* Force full stretch */
+    margin-right: -50vw;
+    height: 350px;                    /* Adjust height */
     overflow: hidden;
-    border-radius: 22px;
-    background: #edeea5;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
+/* Slides */
 .slide {
     display: none;
-    text-align: center;
-    cursor: pointer;
+    width: 100%;
+    height: 100%;
 }
 
 .slide.active {
     display: block;
 }
 
+/* Image */
 .slide img {
     width: 100%;
-    border-radius: 16px 16px 0 0;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
-.slide h2 {
-    color: #2f8f2f;
-    margin-top: 10px;
-}
-
-.slide p {
-    margin-bottom: 14px;
-}
-
+/* OVERLAPPING BUTTONS */
 .prev-btn,
 .next-btn {
     position: absolute;
@@ -87,7 +80,7 @@ h1 {
     font-size: 26px;
     cursor: pointer;
     z-index: 10;
-    color: #2f8f2f;
+    color: #f4f6f4;
 }
 
 .prev-btn {
@@ -98,22 +91,47 @@ h1 {
     right: 12px;
 }
 
+.prev-btn:hover,
+.next-btn:hover {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+/* Dots */
 .dots {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
     display: flex;
     justify-content: center;
-    padding: 12px;
+    gap: 8px;
 }
 
 .dot {
     width: 10px;
     height: 10px;
-    background: #cccccc;
+    background: rgba(255,255,255,0.6);
     border-radius: 50%;
-    margin: 0 4px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .dot.active {
     background: #2f8f2f;
+    transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .offer-slider {
+        height: 220px;
+    }
+
+    .prev-btn,
+    .next-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
 }
 
 .home-body {
@@ -466,87 +484,102 @@ h1 {
 }
 
 /*-------------------Login and Signup--------------------------------*/
-.login-overlay {
+/* ================= AUTH MODAL ================= */
+
+.auth-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.4);
-    opacity: 0;
-    visibility: hidden;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(3px);
+    display: none;
+    z-index: 2000;
+}
+
+.auth-panel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background: #ffffff;
+    width: 90%;
+    max-width: 380px;
+    padding: 30px 25px 35px;
+    border-radius: 18px;
+    text-align: center;
+    display: none;
+    z-index: 2001;
+    transition: all 0.3s ease;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.auth-panel.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.auth-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #2e7d32;
+}
+
+.auth-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.auth-panel input {
+    padding: 14px;
+    border-radius: 10px;
+    border: 1.5px solid #ccc;
+    font-size: 15px;
+    outline: none;
     transition: 0.3s;
-    z-index: 999;
 }
 
-.login-panel {
-    position: fixed;
-    top: 0;
-    right: -380px;
-    width: 360px;
-    height: 100vh;
-    background: #fff;
-    padding: 30px;
-    box-shadow: -5px 0 15px rgba(0,0,0,0.2);
-    transition: 0.4s ease;
-    z-index: 1000;
+.auth-panel input:focus {
+    border-color: #16a34a;
 }
 
-.login-panel.active {
-    right: 0;
-}
-
-.login-overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-.signup-panel {
-    position: fixed;
-    top: 0;
-    right: -400px;
-    width: 380px;
-    height: 100vh;
-    background: #fff;
-    padding: 30px;
-    box-shadow: -5px 0 15px rgba(0,0,0,0.25);
-    transition: 0.4s ease;
-    z-index: 1001;
-}
-
-.signup-panel.active {
-    right: 0;
-}
-
-.login-submit, .signup-submit, .signup-link {
-    width: 100%;
-    padding: 12px;
+.auth-panel button {
+    padding: 14px;
+    border-radius: 10px;
     border: none;
-    border-radius: 6px;
-    font-size: 16px;
+    background: #16a34a;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
     cursor: pointer;
-    margin-top: 5px;
+    transition: 0.3s;
 }
 
-.login-submit { background: green; color: #fff; }
-.signup-submit { background: #007bff; color: #fff; }
-.signup-link { background: none; color: #007bff; border: none; font-weight: bold; cursor: pointer; }
+.auth-panel button:hover {
+    background: #15803d;
+}
 
 .close-btn {
     position: absolute;
     top: 12px;
     right: 15px;
-    font-size: 26px;
+    font-size: 24px;
     background: none;
     border: none;
     cursor: pointer;
+    color: #555;
 }
 
-.login-panel input, .signup-panel input {
-    width: 100%;
-    padding: 15px;
-    margin-top: 15px;
-    margin-bottom: 12px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
+.close-btn:hover {
+    color: red;
 }
+
+/* Mobile Optimization */
+@media (max-width: 480px) {
+    .auth-panel {
+        padding: 25px 20px 30px;
+    }
+}
+
+
 
 .login-btn {
     padding: 8px 14px;
@@ -788,11 +821,6 @@ h1 {
 
     .circle img {
         width: 120px;
-    }
-
-    .login-panel,
-    .signup-panel {
-        width: 100%;
     }
 
     .chatbot {

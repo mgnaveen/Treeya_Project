@@ -17,19 +17,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 40px;
   background: rgb(49, 177, 61);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 15px 30px;
 }
 
 .left {
   display: flex;
   align-items: center;
-  gap: 10px;
 }
 
 .logo {
-  height: 50px;
+  height: 60px;
   width: auto;
 }
 
@@ -84,6 +83,7 @@ body {
   text-decoration: none;
   color: #ffffff;
   transition: 0.3s;
+  gap: 10px;
 }
 
 .icon:hover {

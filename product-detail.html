@@ -207,32 +207,31 @@
 </div>
 
 
-<div class="login-overlay" id="loginOverlay"></div>
+<div class="auth-overlay" id="authOverlay"></div>
 
-<div class="login-panel" id="loginPanel">
-    <button class="close-btn" id="closeLogin">×</button>
+<div class="auth-panel" id="authPanel">
 
-    <h2>Login</h2>
-    <input type="email" placeholder="Email" id="loginEmail">
-    <input type="password" placeholder="Password" id="loginPassword">
-    <button class="login-submit" id="loginBtnSubmit">Login</button>
+    <button class="close-btn" id="closeAuth">&times;</button>
 
-    <p style="text-align:center; margin-top:10px;">
-        <button class="signup-link" id="openSignup" type="button">Sign Up</button>
-    </p>
+    <h2 class="auth-title">Login / Register</h2>
+
+    <div id="phoneSection" class="auth-section">
+        <input type="tel"
+               id="phoneInput"
+               placeholder="Enter Mobile Number"
+               maxlength="10">
+        <button id="sendOtpBtn">Send OTP</button>
+    </div>
+
+    <div id="otpSection" class="auth-section" style="display:none;">
+        <input type="text"
+               id="otpInput"
+               placeholder="Enter 4 Digit OTP"
+               maxlength="4">
+        <button id="verifyOtpBtn">Verify OTP</button>
+    </div>
+
 </div>
-
-<div class="signup-panel" id="signupPanel">
-    <button class="close-btn" id="closeSignup">×</button>
-    <h2>Sign Up</h2>
-    <input type="text" placeholder="Full Name" id="signupName">
-    <input type="email" placeholder="Email" id="signupEmail">
-    <input type="tel" placeholder="Mobile No" id="signupMobile">
-    <input type="text" placeholder="Address" id="signupAddress">
-    <input type="password" placeholder="Password" id="signupPassword">
-    <button class="signup-submit" id="signupBtnSubmit">Sign Up</button>
-</div>
-
 
 <script src="js/product-detail.js"></script>
 <script src="js/cart.js"></script>

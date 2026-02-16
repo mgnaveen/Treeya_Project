@@ -1,3 +1,7 @@
+/* ======================================
+   SLIDER
+====================================== */
+
 const slides = document.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".dot");
 const nextBtn = document.querySelector(".next-btn");
@@ -7,14 +11,12 @@ const slider = document.querySelector(".offer-slider");
 let currentIndex = 0;
 let sliderInterval;
 
-
-
 function showSlide(index) {
     slides.forEach(slide => slide.classList.remove("active"));
     dots.forEach(dot => dot.classList.remove("active"));
 
-    slides[index].classList.add("active");
-    dots[index].classList.add("active");
+    slides[index]?.classList.add("active");
+    dots[index]?.classList.add("active");
 }
 
 function startSlider() {
@@ -27,8 +29,6 @@ function startSlider() {
 function stopSlider() {
     clearInterval(sliderInterval);
 }
-
-
 
 if (slider) {
     slider.addEventListener("mouseenter", stopSlider);
@@ -62,7 +62,140 @@ slides.forEach(slide => {
 startSlider();
 
 
+/* ======================================
+   PHONE OTP AUTH SYSTEM (FIXED)
+====================================== */
 
+const BASE_URL = "http://localhost:8000";
+
+const loginBtn = document.getElementById("loginBtn");
+const footerLogin = document.getElementById("loginTriggerFooter");
+
+const authOverlay = document.getElementById("authOverlay");
+const authPanel = document.getElementById("authPanel");
+
+const phoneInput = document.getElementById("phoneInput");
+const otpInput = document.getElementById("otpInput");
+const otpSection = document.getElementById("otpSection");
+
+function openAuth() {
+    authOverlay.style.display = "block";
+    authPanel.style.display = "block";
+    setTimeout(() => authPanel.classList.add("active"), 10);
+}
+
+function closeAuth() {
+    authOverlay.style.display = "none";
+    authPanel.style.display = "none";
+    authPanel.classList.remove("active");
+}
+
+/* Open Login Popup */
+loginBtn?.addEventListener("click", (e) => {
+    e.preventDefault();
+    openAuth();
+});
+
+footerLogin?.addEventListener("click", (e) => {
+    e.preventDefault();
+    openAuth();
+});
+
+/* Close */
+document.getElementById("closeAuth")?.addEventListener("click", closeAuth);
+authOverlay?.addEventListener("click", closeAuth);
+
+/* Send OTP */
+document.getElementById("sendOtpBtn")?.addEventListener("click", async () => {
+    const phone = phoneInput.value.trim();
+
+    if (!/^[6-9]\d{9}$/.test(phone)) {
+        return alert("Enter valid 10-digit mobile number");
+    }
+
+    try {
+        await fetch(`${BASE_URL}/send-otp`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ phone })
+        });
+
+        otpSection.style.display = "block";
+        alert("OTP Sent ✅");
+    } catch (err) {
+        alert("Server Error ❌");
+    }
+});
+
+/* Verify OTP */
+document.getElementById("verifyOtpBtn")?.addEventListener("click", async () => {
+    const phone = phoneInput.value.trim();
+    const otp = otpInput.value.trim();
+
+    if (!otp) return alert("Enter OTP");
+
+    try {
+        const response = await fetch(`${BASE_URL}/verify-otp`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ phone, otp })
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+    localStorage.setItem("user_id", data.user_id);
+    localStorage.setItem("user_phone", phone);
+
+    loginBtn.innerText = phone.slice(-4);
+    closeAuth();
+
+    alert("Login Successful ✅");
+
+    // 🔥 Check if product was pending
+    const pending = localStorage.getItem("pendingProduct");
+
+    if (pending) {
+        localStorage.removeItem("pendingProduct");
+        localStorage.setItem("selectedProduct", pending);
+        window.location.href = "product-detail.html";
+    }
+}
+ else {
+            alert("Invalid OTP ❌");
+        }
+
+    } catch (err) {
+        alert("Verification Failed ❌");
+    }
+});
+
+/* Restore Login After Refresh */
+document.addEventListener("DOMContentLoaded", () => {
+    const savedPhone = localStorage.getItem("user_phone");
+    if (savedPhone && loginBtn) {
+        loginBtn.innerText = savedPhone.slice(-4);
+    }
+});
+
+
+/* ======================================
+   PROTECT PRODUCT CLICK (MANDATORY LOGIN)
+====================================== */
+
+/*document.querySelectorAll(".product-section").forEach(item => {
+    item.addEventListener("click", function (e) {
+        if (!localStorage.getItem("user_id")) {
+            e.preventDefault();
+            openAuth();
+        }
+    });
+});
+*/
+
+/* ======================================
+   SEARCH
+====================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -70,7 +203,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const products = document.querySelectorAll(".product-card");
 
     if (searchInput) {
-
 
         searchInput.addEventListener("input", () => {
             const value = searchInput.value.toLowerCase().trim();
@@ -83,7 +215,6 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
 
-
         searchInput.addEventListener("keydown", (e) => {
             if (e.key === "Enter") {
                 const q = searchInput.value.trim();
@@ -94,76 +225,31 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
-
 });
 
 
+/* ======================================
+   CART PROTECTION
+====================================== */
 
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    const loginBtn = document.getElementById("loginBtn");
-    const openSignup = document.getElementById("openSignup");
-
-    const loginPanel = document.getElementById("loginPanel");
-    const signupPanel = document.getElementById("signupPanel");
-    const overlay = document.getElementById("loginOverlay");
-
-    const closeLogin = document.getElementById("closeLogin");
-    const closeSignup = document.getElementById("closeSignup");
-
-    if (!loginPanel || !signupPanel || !overlay) return;
-
-
-    loginBtn?.addEventListener("click", (e) => {
-        e.preventDefault();
-        loginPanel.classList.add("active");
-        signupPanel.classList.remove("active");
-        overlay.classList.add("active");
-    });
-
-
-    openSignup?.addEventListener("click", (e) => {
-        e.preventDefault();
-        loginPanel.classList.remove("active");
-        signupPanel.classList.add("active");
-        overlay.classList.add("active");
-    });
-
-
-    function closeAll() {
-        loginPanel.classList.remove("active");
-        signupPanel.classList.remove("active");
-        overlay.classList.remove("active");
-    }
-
-    closeLogin?.addEventListener("click", closeAll);
-    closeSignup?.addEventListener("click", closeAll);
-    overlay?.addEventListener("click", closeAll);
-
-    loginPanel.addEventListener("click", e => e.stopPropagation());
-    signupPanel.addEventListener("click", e => e.stopPropagation());
-
+document.getElementById("cartIcon")?.addEventListener("click", () => {
+    window.location.href = "cart.html";
 });
 
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    const cartIcon = document.getElementById("cartIcon");
-
-    cartIcon?.addEventListener("click", () => {
+/*document.getElementById("cartIcon")?.addEventListener("click", () => {
+    if (!localStorage.getItem("user_id")) {
+        openAuth();
+    } else {
         window.location.href = "cart.html";
-    });
-
-});
-
+    }
+});*/
 
 
+/* ======================================
+   CART COUNT
+====================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
-
     const cartCountEl = document.getElementById("cartCount");
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -176,23 +262,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+/* ======================================
+   CHATBOT
+====================================== */
 
-document.addEventListener("DOMContentLoaded", () => {
-    const footerLogin = document.getElementById("loginTriggerFooter");
-    const headerLogin = document.getElementById("loginBtn");
-
-    if (footerLogin && headerLogin) {
-        footerLogin.addEventListener("click", (e) => {
-            e.preventDefault();
-            headerLogin.click();   // 🔥 trigger popup
-        });
-    }
-});
-
-
-/* ===============================
-   Chatbot Elements
-================================ */
 const chatToggle = document.getElementById("chatToggle");
 const chatbot = document.getElementById("chatbot");
 const closeChat = document.getElementById("closeChat");
@@ -200,39 +273,23 @@ const sendBtn = document.getElementById("sendBtn");
 const userInput = document.getElementById("userInput");
 const chatBody = document.getElementById("chatBody");
 
-/* ===============================
-   Open Chat
-================================ */
 if (chatToggle && chatbot && closeChat && sendBtn && userInput && chatBody) {
 
     chatToggle.onclick = () => {
         chatbot.style.display = "flex";
-
-        const slider = document.querySelector(".offer-slider");
-        if (slider) slider.style.pointerEvents = "none";
     };
 
     closeChat.onclick = () => {
         chatbot.style.display = "none";
-
-        const slider = document.querySelector(".offer-slider");
-        if (slider) slider.style.pointerEvents = "auto";
     };
 
     sendBtn.onclick = sendMessage;
 
     userInput.addEventListener("keypress", (e) => {
-        if (e.key === "Enter") {
-            sendMessage();
-        }
+        if (e.key === "Enter") sendMessage();
     });
-
 }
-;
 
-/* ===============================
-   Send Message Function
-================================ */
 function sendMessage() {
     const message = userInput.value.trim();
     if (!message) return;
@@ -245,9 +302,6 @@ function sendMessage() {
     }, 800);
 }
 
-/* ===============================
-   Add Message to Chat
-================================ */
 function addMessage(text, className) {
     const msg = document.createElement("div");
     msg.className = className;
@@ -256,9 +310,6 @@ function addMessage(text, className) {
     chatBody.scrollTop = chatBody.scrollHeight;
 }
 
-/* ===============================
-   Bot Reply Logic
-================================ */
 function botReply(userMsg) {
     let reply = "Sorry, I didn't understand that.";
 
@@ -266,31 +317,19 @@ function botReply(userMsg) {
 
     if (userMsg.includes("hello") || userMsg.includes("hi")) {
         reply = "Hello! 😊 How can I assist you today?";
-    } 
+    }
     else if (userMsg.includes("price")) {
         reply = "Our pricing details are available on the Products page.";
-    } 
+    }
     else if (userMsg.includes("contact")) {
         reply = "You can contact us at support@example.com 📧";
-    } 
+    }
     else if (userMsg.includes("order")) {
         reply = "Please share your order ID so I can help you.";
-    } 
+    }
     else if (userMsg.includes("refund")) {
         reply = "Refunds are processed within 5–7 business days.";
     }
 
     addMessage(reply, "bot-message");
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-    const adminNav = document.getElementById("adminNav");
-
-    if (adminNav) {
-        if (localStorage.getItem("adminLogged") === "true") {
-            adminNav.style.display = "inline-block";
-        } else {
-            adminNav.style.display = "none";
-        }
-    }
-});
