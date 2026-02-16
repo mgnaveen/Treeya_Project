@@ -33,20 +33,44 @@ body {
 }
 
 
-.slide-spic {
-    padding: 0;
+/* ============================= */
+/* RESET & GLOBAL FIX */
+/* ============================= */
+
+* {
     margin: 0;
-    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* ============================= */
+/* SLIDER WRAPPER */
+/* ============================= */
+
+.slide-spic {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* ============================= */
+/* FULL WIDTH SLIDER */
+/* ============================= */
 
 .offer-slider {
     position: relative;
-    width: 100%;
-    height: 350px;                    
+    width: 100%;              /* Full width without 100vw issue */
+    height: 400px;            /* Desktop height */
     overflow: hidden;
 }
 
+/* ============================= */
+/* SLIDES */
+/* ============================= */
 
 .slide {
     display: none;
@@ -58,62 +82,71 @@ body {
     display: block;
 }
 
+/* ============================= */
+/* IMAGE */
+/* ============================= */
 
 .slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover;        /* Full cover without distortion */
     display: block;
 }
 
-/* OVERLAPPING BUTTONS */
+/* ============================= */
+/* PREV & NEXT BUTTONS */
+/* ============================= */
+
 .prev-btn,
 .next-btn {
     position: absolute;
-    z-index: 5;
     top: 50%;
     transform: translateY(-50%);
-    background: none;
+    background: rgba(0, 0, 0, 0.4);
     border: none;
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    font-size: 26px;
+    font-size: 22px;
+    color: #ffffff;
     cursor: pointer;
     z-index: 10;
-    color: #f4f6f4;
+    transition: 0.3s ease;
 }
 
 .prev-btn {
-    left: 12px;
+    left: 15px;
 }
 
 .next-btn {
-    right: 12px;
+    right: 15px;
 }
 
 .prev-btn:hover,
 .next-btn:hover {
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.7);
 }
 
-/* Dots */
+/* ============================= */
+/* DOTS */
+/* ============================= */
+
 .dots {
     position: absolute;
-    bottom: 15px;
+    bottom: 18px;
     width: 100%;
     display: flex;
     justify-content: center;
-    gap: 8px;
+    gap: 10px;
 }
 
 .dot {
     width: 10px;
     height: 10px;
-    background: rgba(255,255,255,0.6);
+    background: rgba(255, 255, 255, 0.6);
     border-radius: 50%;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .dot.active {
@@ -121,26 +154,46 @@ body {
     transform: scale(1.2);
 }
 
-/* ================= TABLET ================= */
+/* ============================= */
+/* RESPONSIVE DESIGN */
+/* ============================= */
 
-@media (max-width: 1024px) {
+/* Tablet */
+@media (max-width: 992px) {
     .offer-slider {
-        height: 300px;
+        height: 320px;
     }
 }
 
-/* ================= MOBILE ================= */
-
+/* Medium Mobile */
 @media (max-width: 768px) {
-
     .offer-slider {
-        height: 220px;
+        height: 240px;
     }
 
     .prev-btn,
     .next-btn {
-        width: 36px;
-        height: 36px;
+        width: 38px;
+        height: 38px;
+        font-size: 18px;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .offer-slider {
+        height: 190px;
+    }
+
+    .prev-btn,
+    .next-btn {
+        width: 34px;
+        height: 34px;
         font-size: 16px;
     }
 
@@ -152,24 +205,15 @@ body {
         right: 8px;
     }
 
+    .dots {
+        bottom: 10px;
+        gap: 6px;
+    }
+
     .dot {
-        width: 8px;
-        height: 8px;
+        width: 6px;
+        height: 6px;
     }
-}
-
-
-@media (max-width: 480px) {
-
-    .offer-slider {
-        height: 180px;
-    }
-
-    .prev-btn,
-    .next-btn {
-        display: none; 
-    }
-
 }
 
 
