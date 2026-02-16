@@ -275,3 +275,51 @@ body {
   color: #ffffff;
   box-shadow: 0 4px 10px rgba(46,125,50,0.3);
 }
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1024px) {
+  .category-bar {
+    gap: 20px;
+  }
+
+  .category-link {
+    font-size: 14px;
+    padding: 7px 14px;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+  .category-bar {
+    justify-content: flex-start;   /* align left */
+    overflow-x: auto;              /* horizontal scroll */
+    flex-wrap: nowrap;             /* no wrapping */
+    gap: 16px;
+    padding: 12px 12px;
+    scrollbar-width: none;         /* Firefox */
+  }
+
+  .category-bar::-webkit-scrollbar {
+    display: none;                 /* Chrome hide scroll */
+  }
+
+  .category-link {
+    font-size: 13px;
+    padding: 6px 14px;
+  }
+}
+
+/* ================= VERY SMALL PHONES ================= */
+
+@media (max-width: 480px) {
+
+  .category-link {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+}
