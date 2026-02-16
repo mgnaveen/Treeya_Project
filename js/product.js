@@ -98,9 +98,6 @@ categoryLinks.forEach(link => {
 
       localStorage.setItem("products", JSON.stringify(PRODUCTS));
 
-
-
-
       
 
       // ✅ APPLY CATEGORY FROM URL
