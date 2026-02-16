@@ -41,10 +41,10 @@ h1 {
 
 .offer-slider {
     position: relative;
-    max-width: 1300px;
+    max-width: auto;
     margin: 40px auto;   
     overflow: hidden;
-    border-radius: 16px;
+    border-radius: 22px;
     background: #edeea5;
     box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
@@ -708,6 +708,7 @@ h1 {
     padding: 25px;
     border-radius: 16px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
 }
 
 .about-card h3,

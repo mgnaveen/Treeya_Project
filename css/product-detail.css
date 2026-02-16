@@ -237,77 +237,70 @@
 
 /* ================= RECIPE + BENEFIT SECTION ================= */
 
+
 .product-extra {
-  margin-top: 30px;
-  padding: 15px 15px 15px 40px;
+  margin: 60px auto;
+  max-width: 1400px;
+  padding: 0 40px;
 }
 
-/* MAIN FLEX CONTAINER */
+
 .recipe-layout {
   display: flex;
+  justify-content: space-between;
   align-items: flex-start;
-  gap: 50px;
+  gap: 60px;
 }
 
-/* LEFT SIDE (Recipes) */
+
+
 .recipe-left {
   flex: 2;
 }
 
 .recipe-title {
-  margin-bottom: 12px;
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 800;
   color: #1b5e20;
+  margin-bottom: 25px;
 }
+
 
 .recipe-thumbs {
   display: flex;
-  gap: 10px;
-  padding-bottom: 10px;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
-.recipe-thumb {
-  width: 130px;
-  height: 72px;
+.recipe-thumbs img {
+  width: 90px;
+  height: 70px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
-  opacity: 0.6;
-  border: 2px solid transparent;
-  transition: all 0.2s ease;
+  transition: transform 0.3s ease;
 }
 
-.recipe-thumb:hover {
-  opacity: 1;
+.recipe-thumbs img:hover {
   transform: scale(1.05);
 }
 
-.recipe-thumb.active {
-  opacity: 1;
-  border-color: #2e7d32;
-}
 
 .recipe-preview img {
   width: 100%;
-  max-width: 670px;
-  height: 350px;
+  max-width: 650px;
+  height: 380px;
   object-fit: cover;
-  border-radius: 14px;
-  cursor: zoom-in;
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
-  transition: transform 0.25s ease;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-.recipe-preview img:hover {
-  transform: scale(1.02);
-}
 
-/* RIGHT SIDE (Benefits) */
 
 .benefit-section {
   flex: 2;
-  padding-top: 10px;
+  padding-top: 40px;
   padding-bottom: 20px;
 }
 
@@ -333,7 +326,7 @@
   position: relative;
   padding-left: 28px;
   margin-bottom: 12px;
-  font-size: 15px;
+  font-size: 20px;
   color: #09418f;       /*#444;*/
   line-height: 2;
 }
@@ -364,12 +357,53 @@
   }
 }
 
+
+
+
+
+
+/* Your Existing Styles (Keep These) */
+.recipe-preview img {
+  width: 100%;
+  max-width: 600px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 14px;
+  cursor: zoom-in;
+}
+
+.recipe-thumbs {
+  display: flex;
+  gap: 10px;
+}
+
+.recipe-thumb {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.recipe-thumb.active,
+.recipe-thumb:hover {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .recipe-layout {
+    flex-direction: column;
+  }
+}
+
 /* ================= IMAGE MODAL ================= */
 
 .image-modal {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0,0,0,0.85);
   display: none;
   align-items: center;
   justify-content: center;
@@ -381,167 +415,52 @@
 }
 
 .image-modal img {
-  max-width: 92%;
-  max-height: 92%;
+  max-width: 90%;
+  max-height: 90%;
   border-radius: 14px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
-  animation: zoomIn 0.25s ease;
-}
-
-.close-modal {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 34px;
-  font-weight: bold;
-  color: #ffffff;
-  cursor: pointer;
-  user-select: none;
-}
-
-.close-modal:hover {
-  color: #a5d6a7;
-}
-
-@keyframes zoomIn {
-  from {
-    transform: scale(0.85);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
 }
 
 /* ================= RESPONSIVE ================= */
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
 
-  .recipe-layout {
+  .product-layout {
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
   }
 
-  .recipe-preview img {
-    height: 260px;
+  .product-right {
+    position: static;
   }
 
-  .benefit-title {
-    font-size: 22px;
-  }
-
-  .benefit-content li {
-    font-size: 15px;
+  .product-main-image img {
+    height: 450px;
   }
 }
 
 @media (max-width: 768px) {
 
-  .product-extra {
-    padding: 0 15px;
+  .product-main-image img {
+    height: 380px;
   }
 
-  .recipe-preview img {
-    width: 100%;
-    height: 220px;
-  }
-
-  .recipe-thumbs {
+  .product-thumbs {
+    flex-direction: row;
     overflow-x: auto;
-  }
-
-  .recipe-thumb {
-    width: 64px;
-    height: 64px;
   }
 }
 
 @media (max-width: 480px) {
 
-  .recipe-title,
-  .benefit-title {
-    font-size: 20px;
-  }
-
-  .recipe-preview img {
-    height: auto;
-  }
-}
-
-/* ================= VERY SMALL PHONES (360px) ================= */
-
-@media (max-width: 360px) {
-
-  .detail-container {
-    padding: 20px 12px;
-  }
-
-  .product-layout {
-    gap: 20px;
-  }
-
-  .product-right {
-    min-width: 100%;
-    padding: 16px;
-  }
-
   .product-main-image img {
-    height: 240px;
+    height: 300px;
   }
 
-  #name {
-    font-size: 20px;
-  }
-
-  #price,
   #rightPrice {
-    font-size: 20px;
-  }
-
-  .qty-box button {
-    width: 35px;
-    height: 35px;
-    font-size: 18px;
-  }
-
-  #weightSelect {
-    width: 100%;
-  }
-
-  .add-to-cart,
-  .buy-now {
-    padding: 12px 0;
-    font-size: 14px;
-  }
-
-  .related-section {
-    padding: 0 12px;
-  }
-
-  .recipe-layout {
-    flex-direction: column;
-  }
-
-  .recipe-thumbs {
-    gap: 8px;
-  }
-
-  .recipe-thumbs img {
-    width: 70px;
-    height: 55px;
-  }
-
-  .recipe-title,
-  .benefit-title {
-    font-size: 18px;
-  }
-
-  .benefit-content li {
-    font-size: 14px;
-    line-height: 1.6;
+    font-size: 22px;
   }
 }
+
 
 
 

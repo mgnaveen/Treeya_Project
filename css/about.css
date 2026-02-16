@@ -115,7 +115,7 @@
 
 .content-card {
     background: #ffffff;
-    padding: clamp(25px, 4vw, 45px);
+    padding: clamp(25px, 5vw, 45px);
     border-radius: 20px;
     margin-bottom: 40px;
     box-shadow: 0 12px 30px rgba(0,0,0,0.07);
