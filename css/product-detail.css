@@ -235,84 +235,82 @@
 
 /* ================= RECIPE SECTION ================= */
 
-/*  RECIPE SECTION  */
-
+/* ================= RECIPE + BENEFIT SECTION ================= */
 
 .product-extra {
-  margin: 60px auto;
-  max-width: 1400px;
-  padding: 0 40px;
+  margin-top: 30px;
+  padding: 15px 350px 15px 40px;
 }
 
-
+/* MAIN FLEX CONTAINER */
 .recipe-layout {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
-  gap: 60px;
 }
 
-
-
+/* LEFT SIDE (Recipes) */
 .recipe-left {
   flex: 2;
 }
 
 .recipe-title {
-  font-size: 26px;
+  margin-bottom: 12px;
+  font-size: 22px;
   font-weight: 800;
   color: #1b5e20;
-  margin-bottom: 25px;
 }
-
 
 .recipe-thumbs {
   display: flex;
-  gap: 12px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
+  gap: 10px;
+  padding-bottom: 10px;
 }
 
-.recipe-thumbs img {
-  width: 90px;
-  height: 70px;
+.recipe-thumb {
+  width: 130px;
+  height: 72px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  opacity: 0.6;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
 }
 
-.recipe-thumbs img:hover {
+.recipe-thumb:hover {
+  opacity: 1;
   transform: scale(1.05);
 }
 
-@media (hover: none) {
-  .recipe-thumbs img:active {
-    transform: scale(1.02);
-  }
+.recipe-thumb.active {
+  opacity: 1;
+  border-color: #2e7d32;
 }
-
 
 .recipe-preview img {
   width: 100%;
-  max-width: 650px;
-  height: 380px;
+  max-width: 670px;
+  height: 350px;
   object-fit: cover;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 14px;
+  cursor: zoom-in;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+  transition: transform 0.25s ease;
 }
 
+.recipe-preview img:hover {
+  transform: scale(1.02);
+}
 
-
+/* RIGHT SIDE (Benefits) */
 .benefit-section {
-  flex: 2;
-  padding-top: 40px;
+  flex: 1;
+  padding-top: 20px;
   padding-bottom: 20px;
 }
 
-
 .benefit-header {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .benefit-title {
@@ -321,9 +319,8 @@
   color: #1b5e20;
 }
 
-
 .benefit-content ul {
-  list-style: none;   
+  list-style: none;
   padding-left: 0;
   margin-top: 15px;
 }
@@ -333,10 +330,9 @@
   padding-left: 28px;
   margin-bottom: 12px;
   font-size: 16px;
-  color: #09418f;       /*#444;*/
-  line-height: 2;
+  color: #09418f;
+  line-height: 1.8;
 }
-
 
 .benefit-content li::before {
   content: "✔";
@@ -348,10 +344,67 @@
   font-weight: bold;
 }
 
+/* ================= IMAGE MODAL ================= */
+
+.image-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.image-modal.show {
+  display: flex;
+}
+
+.image-modal img {
+  max-width: 92%;
+  max-height: 92%;
+  border-radius: 14px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+  animation: zoomIn 0.25s ease;
+}
+
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 34px;
+  font-weight: bold;
+  color: #ffffff;
+  cursor: pointer;
+  user-select: none;
+}
+
+.close-modal:hover {
+  color: #a5d6a7;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ================= RESPONSIVE ================= */
 
 @media (max-width: 992px) {
-  .benefit-section {
-    padding-top: 40px;
+
+  .recipe-layout {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .recipe-preview img {
+    height: 260px;
   }
 
   .benefit-title {
@@ -363,62 +416,35 @@
   }
 }
 
-/* ================= RESPONSIVE ================= */
-
-@media (max-width: 1024px) {
-
-  .product-layout {
-    flex-direction: column;
-    gap: 40px;
-  }
-
-  .product-right {
-    position: static;
-  }
-
-  .product-main-image img {
-    height: 450px;
-  }
-}
-
 @media (max-width: 768px) {
-
-  .product-main-image img {
-    height: 380px;
-  }
-
-  .product-thumbs {
-    flex-direction: row;
-    overflow-x: auto;
-  }
-}
-
-@media (max-width: 480px) {
-
-  .product-main-image img {
-    height: 300px;
-  }
-
-  #rightPrice {
-    font-size: 22px;
-  }
-
-  .recipe-layout {
-    flex-direction: column;
-    gap: 30px;
-  }
 
   .product-extra {
     padding: 0 15px;
   }
 
+  .recipe-preview img {
+    width: 100%;
+    height: 220px;
+  }
+
+  .recipe-thumbs {
+    overflow-x: auto;
+  }
+
+  .recipe-thumb {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+@media (max-width: 480px) {
+
   .recipe-title,
   .benefit-title {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .recipe-preview img {
-    max-width: 100%;
     height: auto;
   }
 }
