@@ -239,13 +239,14 @@
 
 .product-extra {
   margin-top: 30px;
-  padding: 15px 100px 15px 40px;
+  padding: 15px 15px 15px 40px;
 }
 
 /* MAIN FLEX CONTAINER */
 .recipe-layout {
   display: flex;
   align-items: flex-start;
+  gap: 50px;
 }
 
 /* LEFT SIDE (Recipes) */
@@ -306,7 +307,7 @@
 
 .benefit-section {
   flex: 2;
-  padding-top: 40px;
+  padding-top: 10px;
   padding-bottom: 20px;
 }
 
@@ -332,7 +333,7 @@
   position: relative;
   padding-left: 28px;
   margin-bottom: 12px;
-  font-size: 20px;
+  font-size: 15px;
   color: #09418f;       /*#444;*/
   line-height: 2;
 }
