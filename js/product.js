@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("productContainer");
   const searchInput = document.getElementById("searchInput");
   const categoryButtons = document.querySelectorAll(".category-filter button"); 
-  const categoryLinks = document.querySelectorAll(".category-item"); 
+  const categoryLinks = document.querySelectorAll(".category-link");
 
   if (!container) return;
 
@@ -72,6 +72,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const urlCategory = params.get("category");
   const urlSearch = params.get("search");
 
+  // ✅ Highlight active category on page load
+
+categoryLinks.forEach(link => {
+  const linkCategory = new URL(link.href).searchParams.get("category");
+
+  if (!urlCategory && !linkCategory) {
+    link.classList.add("active");   // All selected
+  } 
+  else if (urlCategory && linkCategory &&
+           urlCategory.toLowerCase() === linkCategory.toLowerCase()) {
+    link.classList.add("active");
+  }
+});
+
+
   // WAIT until PRODUCTS exists
   const waitForProducts = setInterval(() => {
     if (typeof PRODUCTS !== "undefined" && PRODUCTS.length) {
@@ -122,24 +137,35 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ✅ CATEGORY LINK SUPPORT 
-
   categoryLinks.forEach(link => {
-    link.addEventListener("click", e => {
-      e.preventDefault();
+  link.addEventListener("click", e => {
+    e.preventDefault();
 
-      const url = new URL(link.href);
-      const cat = url.searchParams.get("category");
+    // Remove active from all
+    categoryLinks.forEach(l => l.classList.remove("active"));
 
-      filteredProducts = cat
-        ? PRODUCTS.filter(p => p.category.toLowerCase() === cat.toLowerCase())
-        : PRODUCTS;
+    // Add active to clicked
+    link.classList.add("active");
 
-      render(filteredProducts);
+    const url = new URL(link.href);
+    const cat = url.searchParams.get("category");
 
+    filteredProducts = cat
+      ? PRODUCTS.filter(p =>
+          p.category.toLowerCase() === cat.toLowerCase()
+        )
+      : PRODUCTS;
+
+    render(filteredProducts);
+
+    // Update URL properly
+    if (cat) {
       history.pushState({}, "", `product.html?category=${encodeURIComponent(cat)}`);
-    });
+    } else {
+      history.pushState({}, "", "product.html");
+    }
   });
+});
 
   // ORIGINAL SEARCH LOGIC 
   
