@@ -77,13 +77,14 @@
 
 .product-main-image {
   overflow: hidden;
-  border-radius: 16px;
+  border-radius: 20px;
+  align-items: center;
 }
 
 .product-main-image img {
-  width: 135%;
-  height: 300px;
-  object-fit: cover;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
   transition: transform 0.4s ease;
   border-radius: 16px;
   cursor: zoom-in;

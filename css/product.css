@@ -244,15 +244,21 @@ body {
 
 .category-bar {
   width: 100%;
-  padding: 18px 0;
+  padding: 10px 15px;
   display: flex;
-  justify-content: center;   /* center items */
+  justify-content: center;   
   gap: 30px;
-  background: #ffffff;
+  background: #2e7d32;
   border-bottom: 1px solid #eee;
   position: sticky;
-  top: 90px;   /* below header */
+  top: 90px;   
   z-index: 999;
+  overflow-x: auto;
+}
+.category-bar a {
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
 }
 
 .category-link {
