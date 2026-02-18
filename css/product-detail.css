@@ -43,7 +43,7 @@
 
 .product-image-layout {
   display: flex;
-  gap: 18px;
+  gap: 20px;
 }
 
 .product-thumbs {
@@ -434,7 +434,7 @@
 @media (max-width: 768px) {
 
   .product-image-layout { 
-    width: 100%; 
+    width: auto; 
     height: auto; 
     object-fit: contain; 
   }
