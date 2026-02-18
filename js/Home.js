@@ -53,11 +53,22 @@ dots.forEach((dot, index) => {
 });
 
 slides.forEach(slide => {
-    slide.addEventListener("click", () => {
+    slide.addEventListener("click", (e) => {
+
+        // If clicking buttons or dots, do nothing
+        if (
+            e.target.closest(".prev-btn") ||
+            e.target.closest(".next-btn") ||
+            e.target.closest(".dot")
+        ) {
+            return;
+        }
+
         const link = slide.getAttribute("data-link");
         if (link) window.location.href = link;
     });
 });
+
 
 startSlider();
 
