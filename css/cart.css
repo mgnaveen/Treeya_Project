@@ -15,6 +15,7 @@
   grid-template-columns: 2fr 1fr;
   gap: 30px;
   padding: 30px;
+  margin-top: 100px;
 }
 
 .cart-left,
@@ -232,9 +233,10 @@
 ================================= */
 
 .back-btn {
-  position: fixed;
-  top: 120px;
-  left: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0 20px 20px;
   font-size: 22px;
   text-decoration: none;
   color: #000;
@@ -242,11 +244,7 @@
   border-radius: 50%;
   width: 42px;
   height: 42px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  z-index: 999;
   transition: transform 0.2s ease;
 }
 
@@ -287,6 +285,7 @@
   .cart-wrapper {
     grid-template-columns: 1fr;
     padding: 15px;
+    margin-top: 100px;
   }
 
   .cart-item {
@@ -314,8 +313,6 @@
   }
 
   .back-btn {
-    top: 80px;
-    left: 10px;
     width: 36px;
     height: 36px;
     font-size: 18px;
