@@ -274,16 +274,16 @@ body {
 @media (max-width: 768px) {
 
   .category-bar {
-    justify-content: flex-start;   /* align left */
-    overflow-x: auto;              /* horizontal scroll */
-    flex-wrap: nowrap;             /* no wrapping */
+    justify-content: flex-start;   
+    overflow-x: auto;              
+    flex-wrap: nowrap;             
     gap: 16px;
     padding: 12px 12px;
-    scrollbar-width: none;         /* Firefox */
+    scrollbar-width: none;         
   }
 
   .category-bar::-webkit-scrollbar {
-    display: none;                 /* Chrome hide scroll */
+    display: none;                 
   }
 
   .category-link {
