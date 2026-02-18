@@ -12,26 +12,34 @@
 </head>
 
 <body>
-<a href="javascript:history.back()" class="back-btn">←</a>
+
 <header class="glass-header">
-    <div class="left">
-        <a href="index.html">
-            <img src="assets/Logo.png" class="logo" alt="Treeyaa Natural Foods Logo">
-        </a>
-        <span class="brand">Mangalsha</span>
-    </div>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <link rel="stylesheet" href="css/header.css">
-        <a href="product.html">Products</a>
-        <a href="about.html">About</a>
-    </nav>    
+  <div class="left">
+    <a href="index.html">
+      <img src="assets/Logo.png" class="logo" alt="Treeyaa Natural Foods Logo">
+    </a>
+    <span class="brand">Mangalsha</span>
+  </div>
 
-    <div class="right">
-        <input type="text" id="searchInput" placeholder="Search products...">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="product.html">Products</a>
+    <a href="about.html">About</a>
+  </nav>    
+
+  <div class="right">
+    <input type="text" id="searchInput" placeholder="Search products...">
+
+    <div class="icon" id="cartIcon" style="cursor:pointer;">
+      🛒 <span class="badge" id="cartCount">0</span>
     </div>
+    <a class="icon" id="loginBtn">👤</a>
+  </div>
+
 </header>
+
+<a href="javascript:history.back()" class="back-btn">←</a>
 
 <main class="cart-wrapper">
 
