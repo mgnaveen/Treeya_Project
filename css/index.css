@@ -56,6 +56,9 @@ body {
     padding: 0;
     margin: 0;
 }
+.main-content {
+  padding-top: 120px;   /* match actual header height */
+}
 
 /* ============================= */
 /* FULL WIDTH SLIDER */
@@ -111,7 +114,7 @@ body {
     font-size: 22px;
     color: #ffffff;
     cursor: pointer;
-    z-index: 9999;
+    z-index: 10;
     transition: 0.3s ease;
 }
 
@@ -220,7 +223,6 @@ body {
 
 .home-body {
     padding-left: 30px;
-    padding-top: 130px;
     padding-bottom: 10px; 
 
     background-image: url('../assets/Background Image/Background image.jpg'); 
@@ -888,4 +890,25 @@ body {
         width: 90%;
         right: 5%;
     }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  :root {
+    --header-height: 140px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  :root {
+    --header-height: 160px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  :root {
+    --header-height: 180px;
+  }
 }

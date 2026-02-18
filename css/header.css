@@ -4,14 +4,13 @@
 
 body {
   margin: 0;
-  font-family: 'Inter', Arial, sans-serif;
-  background: #faf7f7;
+  padding-top: 110px;
 }
 
 /* ================= HEADER ================= */
 
 .glass-header {
-  position: fixted;
+  position: fixed;   
   top: 0;
   z-index: 1000;
   display: flex;
@@ -20,6 +19,7 @@ body {
   background: rgb(49, 177, 61);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   padding: 15px 30px;
+  width: 100%;
 }
 
 .left {
