@@ -429,7 +429,7 @@
   }
 
   .product-main-image img {
-    height: 450px;
+    height: 400px;
   }
 }
 
@@ -447,7 +447,9 @@
 
 @media (max-width: 480px) {
 
-
+  .product-main-image img {
+    height: 250px;
+  }
 
   #rightPrice {
     font-size: 22px;
