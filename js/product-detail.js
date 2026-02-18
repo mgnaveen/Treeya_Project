@@ -20,16 +20,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   imgEl.src = product.image;
-  /* ===== PRODUCT IMAGE GALLERY ===== */
+
 
 const productThumbs = document.getElementById("productThumbs");
 
-// Support multiple images from product.images array
 const productImages = product.images || [product.image];
 
 productThumbs.innerHTML = "";
 
-// Set first image
 imgEl.src = productImages[0];
 
 productImages.forEach((src, index) => {
@@ -748,7 +746,7 @@ if (benefitList) {
 
 
 
-/* ========= UNIVERSAL RELATED PRODUCTS (FIXED) ========= */
+/* ========= RELATED PRODUCTS (FIXED) ========= */
 
 const relatedSection = document.getElementById("relatedSection");
 const relatedContainer = document.getElementById("relatedContainer");
@@ -764,7 +762,6 @@ if (!currentProduct || !allProducts) {
   relatedSection.style.display = "none";
 } else {
 
-  // normalize category (VERY IMPORTANT)
   const normalize = str =>
     str?.toLowerCase().replace(/\s+/g, "").replace(/s$/, "");
 
@@ -779,7 +776,6 @@ if (!currentProduct || !allProducts) {
     relatedSection.style.display = "none";
   } else {
 
-    // dynamic title
     relatedTitle.textContent =
       `More ${currentProduct.category}`;
 
@@ -837,7 +833,7 @@ if (headerSearch) {
           JSON.stringify(foundProduct)
         );
 
-        window.location.reload(); // reload detail page
+        window.location.reload(); 
 
       } else {
         alert("Product not found");

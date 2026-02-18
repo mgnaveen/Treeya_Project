@@ -283,11 +283,10 @@ body {
   }
 }
 
-/* Small Phones */
 @media (max-width: 480px) {
-
   .right input {
-    display: none;
+    display: block;
+    width: 120px;
   }
 
   .brand {

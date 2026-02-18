@@ -2,8 +2,6 @@
 <html>
 <head>
   <title>Mangalsha</title>
-  <link rel="stylesheet" href="product.css">
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -25,40 +23,52 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 
   <script type="application/ld+json">
-    [
-        {
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": "Treeyaa Natural Foods Categories",
-            "url": "https://www.treeyaa.com",
-            "about": {
-            "@type": "Thing",
-            "name": "Millet and Natural Food Products"
-            },
-            "mainEntity": {
-            "@type": "ItemList",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Millet" },
-                { "@type": "ListItem", "position": 2, "name": "Rice" },
-                { "@type": "ListItem", "position": 3, "name": "Flour" },
-                { "@type": "ListItem", "position": 4, "name": "Snacks" },
-                { "@type": "ListItem", "position": 5, "name": "Recipe" }
-                
-            ]
-            }
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Foxtail Millet",
+      "image": "https://www.treeyaa.com/assets/foxtail.jpg",
+      "description": "Premium quality Foxtail Millet rich in fiber and nutrients.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Treeyaa Natural Foods"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.treeyaa.com/product-detail.html",
+        "priceCurrency": "INR",
+        "price": "130",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+
+    function injectProductSchema(product) {
+      const schema = {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": product.name,
+        "image": window.location.origin + "/" + product.image,
+        "description": product.description,
+        "brand": {
+          "@type": "Brand",
+          "name": "Treeyaa Natural Foods"
         },
-        {
-            "@context": "https://schema.org",
-            "@type": "ItemList",
-            "name": "Running Offers on Natural Foods",
-            "itemListElement": [
-            { "@type": "Offer", "position": 1, "name": "Millet Food Products" },
-            { "@type": "Offer", "position": 2, "name": "Natural Food Products" },
-            { "@type": "Offer", "position": 3, "name": "Traditional Healthy Food Products" }
-            ]
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "INR",
+          "price": product.price,
+          "availability": "https://schema.org/InStock"
         }
-    ]  
+      };
+
+      const script = document.createElement("script");
+      script.type = "application/ld+json";
+      script.text = JSON.stringify(schema);
+      document.head.appendChild(script);
+    }
+
   </script>
+
 </head>
 
 <body>
@@ -91,13 +101,11 @@
 
 <a href="javascript:history.back()" class="back-btn">←</a>
 
-<!-- ================= PRODUCT SECTION ================= -->
 
 <div class="detail-container">
 
   <div class="product-layout">
 
-    <!-- ===== LEFT SIDE (IMAGES) ===== -->
     <div class="product-left">
 
       <div class="product-image-layout">
